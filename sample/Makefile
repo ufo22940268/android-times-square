@@ -1,6 +1,6 @@
 .PHONY : main
 main: library
-	mvn -Dmaven.test.skip=true install android:redeploy  android:run
+	mvn -Dmaven.test.skip=true install android:redeploy  android:run -q
 
 library:
 	$(MAKE) -C ../library/ all

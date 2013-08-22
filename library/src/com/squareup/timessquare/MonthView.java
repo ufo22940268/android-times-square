@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.*;
 
 public class MonthView extends LinearLayout {
   TextView title;
@@ -49,6 +50,8 @@ public class MonthView extends LinearLayout {
     long start = System.currentTimeMillis();
     title.setText(month.getLabel());
 
+    
+    List<Integer> rules = Rule.getRules();
     final int numRows = cells.size();
     grid.setNumRows(numRows);
     for (int i = 0; i < 6; i++) {
@@ -65,7 +68,13 @@ public class MonthView extends LinearLayout {
           cellView.setEnabled(cell.isCurrentMonth());
 
           cellView.setSelectable(cell.isSelectable());
-          cellView.setSelected(cell.isSelected());
+
+          if (cell.isSelected() && !Rule.inRules(cell.getDate(), rules)) {
+              cellView.setSelected(true);
+          } else {
+              cellView.setSelected(false);
+          }
+
           cellView.setCurrentMonth(cell.isCurrentMonth());
           cellView.setToday(cell.isToday());
           cellView.setRangeState(cell.getRangeState());

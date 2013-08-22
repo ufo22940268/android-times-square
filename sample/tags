@@ -198,18 +198,18 @@ $w	Session.vim	/^vnoremap $w `>a"`<i"$/;"	m
 Dmaven.test.skip	Makefile	/^	mvn -Dmaven.test.skip=true install android:redeploy  android:run$/;"	m
 SampleTimesSquareActivity	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^public class SampleTimesSquareActivity extends Activity {$/;"	c
 SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
-TAG	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^  private static final String TAG = "SampleTimesSquareActivity";$/;"	f	class:SampleTimesSquareActivity	file:
+TAG	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^    private static final String TAG = "SampleTimesSquareActivity";$/;"	f	class:SampleTimesSquareActivity	file:
 [%	Session.vim	/^vmap [% [%m'gv``$/;"	m
 ]%	Session.vim	/^vmap ]% ]%m'gv``$/;"	m
 a%	Session.vim	/^vmap a% [%v]%$/;"	m
 aC	Session.vim	/^onoremap <silent> aC :call TextObjWordBasedColumn("aW")$/;"	m
 ac	Session.vim	/^onoremap <silent> ac :call TextObjWordBasedColumn("aw")$/;"	m
-calendar	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^  private CalendarPickerView calendar;$/;"	f	class:SampleTimesSquareActivity	file:
+calendar	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^    private CalendarPickerView calendar;$/;"	f	class:SampleTimesSquareActivity	file:
 com.squareup.timessquare.sample	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^package com.squareup.timessquare.sample;$/;"	p
 gx	Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 iC	Session.vim	/^onoremap <silent> iC :call TextObjWordBasedColumn("iW")$/;"	m
 ic	Session.vim	/^onoremap <silent> ic :call TextObjWordBasedColumn("iw")$/;"	m
-onCreate	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^  protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:SampleTimesSquareActivity
+onCreate	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:SampleTimesSquareActivity
 s:cpo_save	Session.vim	/^let s:cpo_save=&cpo$/;"	v
 s:l	Session.vim	/^let s:l = 2 - ((1 * winheight(0) + 16) \/ 33)$/;"	v
 s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v

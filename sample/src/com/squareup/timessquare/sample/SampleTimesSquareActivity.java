@@ -27,20 +27,31 @@ public class SampleTimesSquareActivity extends Activity {
         setContentView(R.layout.sample_calendar_picker);
 
         final Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.YEAR, 1);
+        nextYear.add(Calendar.YEAR, 2);
 
         final Calendar lastYear = Calendar.getInstance();
         lastYear.add(Calendar.YEAR, -1);
-
-        calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
-        calendar.init(lastYear.getTime(), nextYear.getTime()) //
-            .inMode(SelectionMode.SINGLE) //
-            .withSelectedDate(new Date());
 
         final Button single = (Button) findViewById(R.id.button_single);
         final Button multi = (Button) findViewById(R.id.button_multi);
         final Button range = (Button) findViewById(R.id.button_range);
         final Button dialog = (Button) findViewById(R.id.button_dialog);
+
+        calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
+        single.setEnabled(true);
+        multi.setEnabled(true);
+        range.setEnabled(false);
+
+        Calendar today = Calendar.getInstance();
+        ArrayList<Date> dates = new ArrayList<Date>();
+        //today.add(Calendar.DATE, 3);
+        dates.add(today.getTime());
+        today.add(Calendar.YEAR, 1);
+        dates.add(today.getTime());
+        calendar.init(new Date(), nextYear.getTime()) //
+            .inMode(SelectionMode.RANGE) //
+            .withSelectedDates(dates);
+
         single.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
