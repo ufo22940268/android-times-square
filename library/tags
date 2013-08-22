@@ -207,6 +207,7 @@ CalendarPickerViewTest	test/com/squareup/timessquare/CalendarPickerViewTest.java
 CalendarRowView	src/com/squareup/timessquare/CalendarRowView.java	/^  public CalendarRowView(Context context, AttributeSet attrs) {$/;"	m	class:CalendarRowView
 CalendarRowView	src/com/squareup/timessquare/CalendarRowView.java	/^public class CalendarRowView extends ViewGroup implements View.OnClickListener {$/;"	c
 CellClickedListener	src/com/squareup/timessquare/CalendarPickerView.java	/^    private class CellClickedListener implements MonthView.Listener {$/;"	c	class:CalendarPickerView
+CloseRule	src/com/squareup/timessquare/CloseRule.java	/^public class CloseRule {$/;"	c
 DateSelectableFilter	src/com/squareup/timessquare/CalendarPickerView.java	/^    public interface DateSelectableFilter {$/;"	i	class:CalendarPickerView
 DefaultOnInvalidDateSelectedListener	src/com/squareup/timessquare/CalendarPickerView.java	/^    private class DefaultOnInvalidDateSelectedListener implements OnInvalidDateSelectedListener {$/;"	c	class:CalendarPickerView
 FIRST	src/com/squareup/timessquare/MonthCellDescriptor.java	/^    NONE, FIRST, MIDDLE, LAST$/;"	e	enum:MonthCellDescriptor.RangeState	file:
@@ -231,7 +232,6 @@ OnDateSelectedListener	src/com/squareup/timessquare/CalendarPickerView.java	/^  
 OnInvalidDateSelectedListener	src/com/squareup/timessquare/CalendarPickerView.java	/^    public interface OnInvalidDateSelectedListener {$/;"	i	class:CalendarPickerView
 RANGE	src/com/squareup/timessquare/CalendarPickerView.java	/^            RANGE$/;"	e	enum:CalendarPickerView.SelectionMode	file:
 RangeState	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  public enum RangeState {$/;"	g	class:MonthCellDescriptor
-Rule	src/com/squareup/timessquare/Rule.java	/^public class Rule {$/;"	c
 SINGLE	src/com/squareup/timessquare/CalendarPickerView.java	/^        SINGLE,$/;"	e	enum:CalendarPickerView.SelectionMode	file:
 STATE_CURRENT_MONTH	src/com/squareup/timessquare/CalendarCellView.java	/^  private static final int[] STATE_CURRENT_MONTH = {$/;"	f	class:CalendarCellView	file:
 STATE_RANGE_FIRST	src/com/squareup/timessquare/CalendarCellView.java	/^  private static final int[] STATE_RANGE_FIRST = {$/;"	f	class:CalendarCellView	file:
@@ -256,7 +256,7 @@ assertRangeSelected	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^
 assertRangeSelectionBehavior	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private void assertRangeSelectionBehavior() {$/;"	m	class:CalendarPickerViewTest	file:
 betweenDates	src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean betweenDates(Calendar cal, Calendar minCal, Calendar maxCal) {$/;"	m	class:CalendarPickerView	file:
 betweenDates	src/com/squareup/timessquare/CalendarPickerView.java	/^    static boolean betweenDates(Date date, Calendar minCal, Calendar maxCal) {$/;"	m	class:CalendarPickerView
-build	src/com/squareup/timessquare/Rule.java	/^    public Set<Integer> build() {$/;"	m	class:Rule
+build	src/com/squareup/timessquare/CloseRule.java	/^    public Set<Integer> build() {$/;"	m	class:CloseRule
 buildCal	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Calendar buildCal(int year, @MagicConstant(intValues = {$/;"	m	class:CalendarPickerViewTest	file:
 cell	src/com/squareup/timessquare/CalendarPickerView.java	/^        public MonthCellDescriptor cell;$/;"	f	class:CalendarPickerView.MonthCellWithMonthIndex
 cellSize	src/com/squareup/timessquare/CalendarRowView.java	/^  private int cellSize;$/;"	f	class:CalendarRowView	file:
@@ -266,16 +266,23 @@ com.squareup.timessquare	src/com/squareup/timessquare/CalendarCellView.java	/^pa
 com.squareup.timessquare	src/com/squareup/timessquare/CalendarGridView.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/CalendarPickerView.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/CalendarRowView.java	/^package com.squareup.timessquare;$/;"	p
+com.squareup.timessquare	src/com/squareup/timessquare/CloseRule.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/Logr.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/MonthCellDescriptor.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/MonthDescriptor.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	src/com/squareup/timessquare/MonthView.java	/^package com.squareup.timessquare;$/;"	p
-com.squareup.timessquare	src/com/squareup/timessquare/Rule.java	/^package com.squareup.timessquare;$/;"	p
 com.squareup.timessquare	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^package com.squareup.timessquare;$/;"	p
 containsDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean containsDate(List<Calendar> selectedCals, Calendar cal) {$/;"	m	class:CalendarPickerView	file:
 create	src/com/squareup/timessquare/MonthView.java	/^  public static MonthView create(ViewGroup parent, LayoutInflater inflater,$/;"	m	class:MonthView
 d	src/com/squareup/timessquare/Logr.java	/^  public static void d(String message) {$/;"	m	class:Logr
 d	src/com/squareup/timessquare/Logr.java	/^  public static void d(String message, Object... args) {$/;"	m	class:Logr
+d1	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d1 = getDate(1);$/;"	f	class:CalendarPickerViewTest	file:
+d2	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d2 = getDate(2);$/;"	f	class:CalendarPickerViewTest	file:
+d20	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d20 = getDate(20);$/;"	f	class:CalendarPickerViewTest	file:
+d3	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d3 = getDate(3);$/;"	f	class:CalendarPickerViewTest	file:
+d4	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d4 = getDate(4);$/;"	f	class:CalendarPickerViewTest	file:
+d5	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d5 = getDate(5);$/;"	f	class:CalendarPickerViewTest	file:
+d8	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date d8 = getDate(8);$/;"	f	class:CalendarPickerViewTest	file:
 date	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  private final Date date;$/;"	f	class:MonthCellDescriptor	file:
 date	src/com/squareup/timessquare/MonthDescriptor.java	/^  private final Date date;$/;"	f	class:MonthDescriptor	file:
 dateConfiguredListener	src/com/squareup/timessquare/CalendarPickerView.java	/^    private DateSelectableFilter dateConfiguredListener;$/;"	f	class:CalendarPickerView	file:
@@ -285,14 +292,14 @@ dispatchDraw	src/com/squareup/timessquare/CalendarGridView.java	/^  @Override pr
 dividerPaint	src/com/squareup/timessquare/CalendarGridView.java	/^  private final Paint dividerPaint = new Paint();$/;"	f	class:CalendarGridView	file:
 doSelectDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    private boolean doSelectDate(Date date, MonthCellDescriptor cell) {$/;"	m	class:CalendarPickerView	file:
 drawChild	src/com/squareup/timessquare/CalendarGridView.java	/^  @Override protected boolean drawChild(Canvas canvas, View child, long drawingTime) {$/;"	m	class:CalendarGridView
-encode	src/com/squareup/timessquare/Rule.java	/^    public static int encode(Date date) {$/;"	m	class:Rule
+encode	src/com/squareup/timessquare/CloseRule.java	/^    public static int encode(Date date) {$/;"	m	class:CloseRule
 fullDateFormat	src/com/squareup/timessquare/CalendarPickerView.java	/^    private DateFormat fullDateFormat;$/;"	f	class:CalendarPickerView	file:
 getCells	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private List<List<MonthCellDescriptor>> getCells(int month, int year) {$/;"	m	class:CalendarPickerViewTest	file:
 getCount	src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public int getCount() {$/;"	m	class:CalendarPickerView.MonthAdapter
 getDate	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  public Date getDate() {$/;"	m	class:MonthCellDescriptor
 getDate	src/com/squareup/timessquare/MonthDescriptor.java	/^  public Date getDate() {$/;"	m	class:MonthDescriptor
-getDate	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date getDate(int date) {$/;"	m	class:CalendarPickerViewTest	file:
-getDateRules	src/com/squareup/timessquare/Rule.java	/^    public static List<Date> getDateRules() {$/;"	m	class:Rule
+getDate	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private static Date getDate(int date) {$/;"	m	class:CalendarPickerViewTest	file:
+getDateRules	src/com/squareup/timessquare/CloseRule.java	/^    public static List<Date> getDateRules() {$/;"	m	class:CloseRule
 getItem	src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public Object getItem(int position) {$/;"	m	class:CalendarPickerView.MonthAdapter
 getItemId	src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public long getItemId(int position) {$/;"	m	class:CalendarPickerView.MonthAdapter
 getLabel	src/com/squareup/timessquare/MonthDescriptor.java	/^  public String getLabel() {$/;"	m	class:MonthDescriptor
@@ -300,7 +307,7 @@ getMonth	src/com/squareup/timessquare/MonthDescriptor.java	/^  public int getMon
 getMonthCellWithIndexByDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    private MonthCellWithMonthIndex getMonthCellWithIndexByDate(Date date) {$/;"	m	class:CalendarPickerView	file:
 getMonthCells	src/com/squareup/timessquare/CalendarPickerView.java	/^    List<List<MonthCellDescriptor>> getMonthCells(MonthDescriptor month, Calendar startCal) {$/;"	m	class:CalendarPickerView
 getRangeState	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  public RangeState getRangeState() {$/;"	m	class:MonthCellDescriptor
-getRules	src/com/squareup/timessquare/Rule.java	/^    public static List<Integer> getRules() {$/;"	m	class:Rule
+getRules	src/com/squareup/timessquare/CloseRule.java	/^    public static List<Integer> getRules() {$/;"	m	class:CloseRule
 getSelectedDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    public Date getSelectedDate() {$/;"	m	class:CalendarPickerView
 getSelectedDates	src/com/squareup/timessquare/CalendarPickerView.java	/^    public List<Date> getSelectedDates() {$/;"	m	class:CalendarPickerView
 getValue	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  public int getValue() {$/;"	m	class:MonthCellDescriptor
@@ -313,11 +320,11 @@ handleClick	src/com/squareup/timessquare/MonthView.java	/^    void handleClick(M
 iC	Session.vim	/^onoremap <silent> iC :call TextObjWordBasedColumn("iW")$/;"	m
 ic	Session.vim	/^onoremap <silent> ic :call TextObjWordBasedColumn("iw")$/;"	m
 inMode	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer inMode(SelectionMode mode) {$/;"	m	class:CalendarPickerView.FluentInitializer
-inRules	src/com/squareup/timessquare/Rule.java	/^    public static boolean inRules(Date d, List<Integer> rules) {$/;"	m	class:Rule
+inRules	src/com/squareup/timessquare/CloseRule.java	/^    public static boolean inRules(Date d, Collection<Integer> rules) {$/;"	m	class:CloseRule
 inflater	src/com/squareup/timessquare/CalendarPickerView.java	/^        private final LayoutInflater inflater;$/;"	f	class:CalendarPickerView.MonthAdapter	file:
 init	src/com/squareup/timessquare/CalendarPickerView.java	/^    public FluentInitializer init(Date minDate, Date maxDate) {$/;"	m	class:CalendarPickerView
+init	src/com/squareup/timessquare/CloseRule.java	/^    public static CloseRule init(Date f, Date t) {$/;"	m	class:CloseRule
 init	src/com/squareup/timessquare/MonthView.java	/^  public void init(MonthDescriptor month, List<List<MonthCellDescriptor>> cells) {$/;"	m	class:MonthView
-init	src/com/squareup/timessquare/Rule.java	/^    public static Rule init(Date f, Date t) {$/;"	m	class:Rule
 invalidDateListener	src/com/squareup/timessquare/CalendarPickerView.java	/^    private OnInvalidDateSelectedListener invalidDateListener =$/;"	f	class:CalendarPickerView	file:
 isCurrentMonth	src/com/squareup/timessquare/CalendarCellView.java	/^  private boolean isCurrentMonth = false;$/;"	f	class:CalendarCellView	file:
 isCurrentMonth	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  private final boolean isCurrentMonth;$/;"	f	class:MonthCellDescriptor	file:
@@ -338,9 +345,9 @@ label	src/com/squareup/timessquare/MonthDescriptor.java	/^  private String label
 listener	src/com/squareup/timessquare/CalendarPickerView.java	/^    private final MonthView.Listener listener = new CellClickedListener();$/;"	f	class:CalendarPickerView	file:
 listener	src/com/squareup/timessquare/CalendarRowView.java	/^  private MonthView.Listener listener;$/;"	f	class:CalendarRowView	file:
 listener	src/com/squareup/timessquare/MonthView.java	/^  private Listener listener;$/;"	f	class:MonthView	file:
-mFrom	src/com/squareup/timessquare/Rule.java	/^    private Date mFrom;$/;"	f	class:Rule	file:
-mRules	src/com/squareup/timessquare/Rule.java	/^    private Set<Integer> mRules;$/;"	f	class:Rule	file:
-mTo	src/com/squareup/timessquare/Rule.java	/^    private Date mTo;$/;"	f	class:Rule	file:
+mFrom	src/com/squareup/timessquare/CloseRule.java	/^    private Date mFrom;$/;"	f	class:CloseRule	file:
+mRules	src/com/squareup/timessquare/CloseRule.java	/^    private Set<Integer> mRules = new HashSet<Integer>();$/;"	f	class:CloseRule	file:
+mTo	src/com/squareup/timessquare/CloseRule.java	/^    private Date mTo;$/;"	f	class:CloseRule	file:
 maxCal	src/com/squareup/timessquare/CalendarPickerView.java	/^    private final Calendar maxCal = Calendar.getInstance();$/;"	f	class:CalendarPickerView	file:
 maxDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    private static Calendar maxDate(List<Calendar> selectedCals) {$/;"	m	class:CalendarPickerView	file:
 maxDate	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private Date maxDate;$/;"	f	class:CalendarPickerViewTest	file:
@@ -373,7 +380,7 @@ s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0
 s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
 s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 sameDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean sameDate(Calendar cal, Calendar selectedDate) {$/;"	m	class:CalendarPickerView	file:
-sameDate	src/com/squareup/timessquare/Rule.java	/^    private static boolean sameDate(Date d1, Date d2) {$/;"	m	class:Rule	file:
+sameDate	src/com/squareup/timessquare/CloseRule.java	/^    private static boolean sameDate(Date d1, Date d2) {$/;"	m	class:CloseRule	file:
 sameMonth	src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean sameMonth(Calendar cal, MonthDescriptor month) {$/;"	m	class:CalendarPickerView	file:
 scrollToSelectedMonth	src/com/squareup/timessquare/CalendarPickerView.java	/^    private void scrollToSelectedMonth(final int selectedIndex) {$/;"	m	class:CalendarPickerView	file:
 selectDate	src/com/squareup/timessquare/CalendarPickerView.java	/^    public boolean selectDate(Date date) {$/;"	m	class:CalendarPickerView
@@ -401,6 +408,7 @@ setToday	src/com/squareup/timessquare/CalendarCellView.java	/^  public void setT
 setUp	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void setUp() throws Exception {$/;"	m	class:CalendarPickerViewTest
 test	src/com/squareup/timessquare/CalendarPickerView.java	/^    int test = 0;$/;"	f	class:CalendarPickerView
 testFirstDayOfWeekIsMonday	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testFirstDayOfWeekIsMonday() throws Exception {$/;"	m	class:CalendarPickerViewTest
+testHashSet	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testHashSet() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testInitDecember	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testInitDecember() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testInitJanuary	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testInitJanuary() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testInitMidyear	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testInitMidyear() throws Exception {$/;"	m	class:CalendarPickerViewTest
@@ -418,7 +426,9 @@ testRangeSelectionWithNoInitialSelection	test/com/squareup/timessquare/CalendarP
 testRangeStateOnDateSelections	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeStateOnDateSelections() {$/;"	m	class:CalendarPickerViewTest
 testRangeWithOneInitialSelection	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeWithOneInitialSelection() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRangeWithTwoInitialSelections	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeWithTwoInitialSelections() throws Exception {$/;"	m	class:CalendarPickerViewTest
-testRuleFilter	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilter() throws Exception {$/;"	m	class:CalendarPickerViewTest
+testRuleFilterByDates	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByDates() throws Exception {$/;"	m	class:CalendarPickerViewTest
+testRuleFilterByMonth	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
+testRuleFilterByWeekday	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByWeekday() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleIntegers	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleIntegers() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testSelectabilityInFirstMonth	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testSelectabilityInFirstMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testSelectabilityInLastMonth	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testSelectabilityInLastMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
@@ -437,8 +447,10 @@ validateAndUpdate	src/com/squareup/timessquare/CalendarPickerView.java	/^    pri
 value	src/com/squareup/timessquare/MonthCellDescriptor.java	/^  private final int value;$/;"	f	class:MonthCellDescriptor	file:
 view	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    private CalendarPickerView view;$/;"	f	class:CalendarPickerViewTest	file:
 weekdayNameFormat	src/com/squareup/timessquare/CalendarPickerView.java	/^    private DateFormat weekdayNameFormat;$/;"	f	class:CalendarPickerView	file:
-withDisableDates	src/com/squareup/timessquare/Rule.java	/^    public Rule withDisableDates(List<Date> dates) {$/;"	m	class:Rule
+withDisableDates	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withDisableDates(List<Date> dates) {$/;"	m	class:CloseRule
 withLocale	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withLocale(Locale locale) {$/;"	m	class:CalendarPickerView.FluentInitializer
+withOpenMonth	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenMonth(int month) {$/;"	m	class:CloseRule
+withOpenWeekday	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenWeekday(int weekday) {$/;"	m	class:CloseRule
 withSelectedDate	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDate(Date selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withSelectedDates	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDates(Collection<Date> selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 year	src/com/squareup/timessquare/MonthDescriptor.java	/^  private final int year;$/;"	f	class:MonthDescriptor	file:

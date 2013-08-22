@@ -51,7 +51,7 @@ public class MonthView extends LinearLayout {
     title.setText(month.getLabel());
 
     
-    List<Integer> rules = Rule.getRules();
+    List<Integer> rules = CloseRule.getRules();
     final int numRows = cells.size();
     grid.setNumRows(numRows);
     for (int i = 0; i < 6; i++) {
@@ -69,7 +69,7 @@ public class MonthView extends LinearLayout {
 
           cellView.setSelectable(cell.isSelectable());
 
-          if (cell.isSelected() && !Rule.inRules(cell.getDate(), rules)) {
+          if (cell.isSelected() && !CloseRule.inRules(cell.getDate(), rules)) {
               cellView.setSelected(true);
           } else {
               cellView.setSelected(false);

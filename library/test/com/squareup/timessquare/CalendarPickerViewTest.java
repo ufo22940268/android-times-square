@@ -50,6 +50,15 @@ public class CalendarPickerViewTest {
     private Date maxDate;
     private Date minDate;
 
+
+    private Date d1 = getDate(1);
+    private Date d2 = getDate(2);
+    private Date d20 = getDate(20);
+    private Date d3 = getDate(3);
+    private Date d4 = getDate(4);
+    private Date d5 = getDate(5);
+    private Date d8 = getDate(8);
+
     //@Before
     public void setUp() throws Exception {
         view = new CalendarPickerView(new Activity(), null);
@@ -68,17 +77,20 @@ public class CalendarPickerViewTest {
 
     @Test
     public void testRuleFilterByDates() throws Exception {
-        Date d1 = getDate(1);
-        Date d3 = getDate(3);
-        Date d4 = getDate(4);
-        Date d5 = getDate(5);
-        Date d20 = getDate(20);
-        Collection<Integer> rules = Rule.init(d1, d20)
+        Collection<Integer> rules = CloseRule.init(d1, d20)
             .withDisableDates(Arrays.asList(d3, d4))
             .build();
 
-        assertThat(Rule.inRules(d4, rules)).isTrue();
-        assertThat(Rule.inRules(d5, rules)).isFalse();
+        assertThat(CloseRule.inRules(d4, rules)).isTrue();
+        assertThat(CloseRule.inRules(d5, rules)).isFalse();
+    }
+
+    @Test
+    public void testHashSet() throws Exception {
+        Set<Integer> set = new HashSet<Integer>();
+        set.add(new Integer(1));
+        set.add(new Integer(1));
+        assertThat(set.size()).isEqualTo(1);
     }
 
     @Test
@@ -87,22 +99,31 @@ public class CalendarPickerViewTest {
         Calendar cal = Calendar.getInstance();
         cal.setTime(d1);
         assertThat(cal.get(Calendar.DAY_OF_WEEK)).isEqualTo(Calendar.THURSDAY);
-        Date d2 = getDate(2);
-        Date d3 = getDate(3);
-        Date d4 = getDate(4);
-        Date d5 = getDate(5);
-        Date d8 = getDate(8);
-        Date d20 = getDate(20);
-        Collection<Integer> rules = Rule.init(d1, d20)
-            .withDisableWeekday(Calendar.THURSDAY)
+        Collection<Integer> rules = CloseRule.init(d1, d20)
+            .withOpenWeekday(Calendar.THURSDAY)
             .build();
 
-        assertThat(Rule.inRules(d1, rules)).isTrue();
-        assertThat(Rule.inRules(d2, rules)).isFalse();
-        assertThat(Rule.inRules(d8, rules)).isTrue();
+        assertThat(CloseRule.inRules(d1, rules)).isFalse();
+        assertThat(CloseRule.inRules(d2, rules)).isTrue();
+        assertThat(CloseRule.inRules(d8, rules)).isFalse();
     }
 
-    private Date getDate(int date) {
+    @Test
+    public void testRuleFilterByMonth() throws Exception {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, -2);
+        Collection<Integer> rules = CloseRule.init(cal.getTime(), d20)
+            .withOpenMonth(Calendar.AUGUST)
+            .build();
+        assertThat(CloseRule.inRules(d1, rules)).isFalse();
+
+        cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, -1);
+        assertThat(cal.get(Calendar.MONTH)).isEqualTo(Calendar.JULY);
+        assertThat(CloseRule.inRules(cal.getTime(), rules)).isTrue();
+    }
+
+    private static Date getDate(int date) {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DATE, date);
         return cal.getTime();
@@ -110,11 +131,11 @@ public class CalendarPickerViewTest {
 
     @Test
     public void testRuleIntegers() throws Exception {
-        List<Integer> rules = Rule.getRules();
-        assertThat(Rule.inRules(new Date(), rules)).isTrue();
+        List<Integer> rules = CloseRule.getRules();
+        assertThat(CloseRule.inRules(new Date(), rules)).isTrue();
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -1);
-        assertThat(Rule.inRules(cal.getTime(), rules)).isFalse();
+        assertThat(CloseRule.inRules(cal.getTime(), rules)).isFalse();
     }
 
     
