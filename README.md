@@ -5,6 +5,17 @@ Standalone Android widget for picking a single date from a calendar view. Please
 
 ![Screenshot](timesSquareScreenshot.png)
 
+Build on mac os from scratch
+-----
+
+- download android sdk from [here].
+- Configure `ANDROID_HOME` in shell enviroment.
+```bash
+export ANDROID_HOME="/path/to/sdk"
+```
+- Install maven. If you haven't installed `homebrew` in your mac already, please use `sudo brew install maven` to install maven.
+- execute `mvn install` at root directory.
+
 Usage
 -----
 
@@ -97,3 +108,4 @@ License
 
 
  [zip]: https://github.com/square/android-times-square/archive/master.zip
+ [here]: http://developer.android.com/sdk/index.html
