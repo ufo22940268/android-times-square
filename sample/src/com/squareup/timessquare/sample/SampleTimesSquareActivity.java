@@ -75,6 +75,7 @@ public class SampleTimesSquareActivity extends Activity {
                 disable_dates.setEnabled(false);
                 preorder.setEnabled(true);
                 weekly.setEnabled(true);
+                month.setEnabled(true);
 
                 Collection<Integer> rules = CloseRule.init(d1, d31)
                     .withDisableDates(Arrays.asList(d26, d27))
@@ -83,6 +84,9 @@ public class SampleTimesSquareActivity extends Activity {
                 calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
                     .inMode(SelectionMode.RANGE) //
                     .withSelectedDates(Arrays.asList(d1, d31));
+
+                Toast.makeText(SampleTimesSquareActivity.this,
+                    "disabled date " + d26 + "," + d27 , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -92,6 +96,7 @@ public class SampleTimesSquareActivity extends Activity {
                 disable_dates.setEnabled(true);
                 preorder.setEnabled(false);
                 weekly.setEnabled(true);
+                month.setEnabled(true);
 
                 Calendar cal = Calendar.getInstance();
                 cal.set(Calendar.HOUR_OF_DAY, 6);
@@ -99,13 +104,18 @@ public class SampleTimesSquareActivity extends Activity {
                 cal.set(Calendar.HOUR_OF_DAY, 23);
                 Date night = cal.getTime();
 
+                int pre = 0;
+                Date preTime = night;
                 Collection<Integer> rules = CloseRule.init(d1, d31)
-                    .withPreorder(0, night)
+                    .withPreorder(pre, preTime)
                     .build();
 
                 calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
                     .inMode(SelectionMode.RANGE) //
                     .withSelectedDates(Arrays.asList(d1, d31));
+
+                Toast.makeText(SampleTimesSquareActivity.this,
+                    String.format("preorder: %d days before %s", pre, preTime.toString()) , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -131,6 +141,8 @@ public class SampleTimesSquareActivity extends Activity {
                 calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
                     .inMode(SelectionMode.RANGE) //
                     .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+                Toast.makeText(SampleTimesSquareActivity.this,
+                    "Open on monday", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -156,15 +168,8 @@ public class SampleTimesSquareActivity extends Activity {
                 calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
                     .inMode(SelectionMode.RANGE) //
                     .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
-            }
-        });
-
-        findViewById(R.id.done_button).setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "Selected time in millis: " + calendar.getSelectedDate().getTime());
-                String toast = "Selected: " + calendar.getSelectedDate().getTime();
-                Toast.makeText(SampleTimesSquareActivity.this, toast, LENGTH_SHORT).show();
+                Toast.makeText(SampleTimesSquareActivity.this,
+                    "Open on august", Toast.LENGTH_SHORT).show();
             }
         });
     }
