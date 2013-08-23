@@ -1,7 +1,7 @@
 TimesSquare for Android
 ==========================
 
-Standalone Android widget for picking a single date from a calendar view.
+Standalone Android widget for picking a single date from a calendar view. Please checkout the example to learn how to use it.
 
 ![Screenshot](timesSquareScreenshot.png)
 
@@ -43,6 +43,22 @@ select multiple dates or a date range, use the inMode() method:
 calendar.init(today, nextYear.getTime())
     .inMode(RANGE);
 ```
+
+Addon utils for meishixing
+--------
+
+You can set `CloseRule` to filter the result from range selection.
+
+```java
+Collection<Integer> rules = CloseRule.init(d1, d31)
+    .withDisableDates(Arrays.asList(d26, d27))
+    .build();
+
+calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
+    .inMode(SelectionMode.RANGE) //
+    .withSelectedDates(Arrays.asList(d1, d31));
+```
+
 
 Download
 --------
