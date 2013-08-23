@@ -158,7 +158,7 @@ public class SampleTimesSquareActivity extends Activity {
                 cal.add(Calendar.MONTH, -1);
                 Date prevMonth = cal.getTime(); 
                 cal = Calendar.getInstance();
-                cal.add(Calendar.MONTH, 1);
+                cal.add(Calendar.MONTH, 4);
                 Date nextMonth = cal.getTime(); 
 
                 Collection<Integer> rules = CloseRule.init(prevMonth, nextMonth)
@@ -168,6 +168,7 @@ public class SampleTimesSquareActivity extends Activity {
                 calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
                     .inMode(SelectionMode.RANGE) //
                     .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+
                 Toast.makeText(SampleTimesSquareActivity.this,
                     "Open on august", Toast.LENGTH_SHORT).show();
             }

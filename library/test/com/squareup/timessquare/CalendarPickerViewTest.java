@@ -127,6 +127,24 @@ public class CalendarPickerViewTest {
         cal.add(Calendar.MONTH, -1);
         assertThat(cal.get(Calendar.MONTH)).isEqualTo(Calendar.JULY);
         assertThat(CloseRule.inRules(cal.getTime(), rules)).isTrue();
+
+        //
+        cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, -1);
+        Date prevMonth = cal.getTime(); 
+        cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 1);
+        Date nextMonth = cal.getTime(); 
+        rules = CloseRule.init(prevMonth, nextMonth)
+            .withOpenMonth(Calendar.AUGUST)
+            .build();
+        view.init(minDate, maxDate, rules) //
+            .inMode(RANGE) //
+            .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+
+        cal.set(Calendar.MONTH,  Calendar.SEPTEMBER);
+        cal.set(Calendar.DAY_OF_MONTH,  23);
+        assertThat(CloseRule.inRules(cal.getTime(), rules)).isFalse();
     }
 
     @Test
