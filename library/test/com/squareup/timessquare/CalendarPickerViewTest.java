@@ -57,9 +57,10 @@ public class CalendarPickerViewTest {
     private Date d3 = getDate(3);
     private Date d4 = getDate(4);
     private Date d5 = getDate(5);
+    private Date d6 = getDate(6);
     private Date d8 = getDate(8);
 
-    //@Before
+    @Before
     public void setUp() throws Exception {
         view = new CalendarPickerView(new Activity(), null);
         today = Calendar.getInstance();
@@ -77,12 +78,17 @@ public class CalendarPickerViewTest {
 
     @Test
     public void testRuleFilterByDates() throws Exception {
-        Collection<Integer> rules = CloseRule.init(d1, d20)
+        Collection<Integer> rules = CloseRule.init(d1, d6)
             .withDisableDates(Arrays.asList(d3, d4))
             .build();
 
         assertThat(CloseRule.inRules(d4, rules)).isTrue();
         assertThat(CloseRule.inRules(d5, rules)).isFalse();
+
+        view.init(minDate, maxDate, rules) //
+            .inMode(RANGE) //
+            .withSelectedDates(Arrays.asList(d1, d6));
+        assertThat(view.getSelectedDates()).hasSize(4);
     }
 
     @Test
@@ -121,6 +127,30 @@ public class CalendarPickerViewTest {
         cal.add(Calendar.MONTH, -1);
         assertThat(cal.get(Calendar.MONTH)).isEqualTo(Calendar.JULY);
         assertThat(CloseRule.inRules(cal.getTime(), rules)).isTrue();
+    }
+
+    @Test
+    public void testRuleFilterByPreOrder() throws Exception {
+        int delta = 0;
+        Calendar cal = Calendar.getInstance();
+
+        cal.set(Calendar.HOUR_OF_DAY, 6);
+        Date mornning = cal.getTime();
+
+        cal.set(Calendar.HOUR_OF_DAY, 23);
+        Date night = cal.getTime();
+
+        Date today = new Date();
+
+        Collection<Integer> rules = CloseRule.init(cal.getTime(), d20)
+            .withPreorder(0, mornning)
+            .build();
+        assertThat(CloseRule.inRules(today, rules)).isFalse();
+
+        rules = CloseRule.init(cal.getTime(), d20)
+            .withPreorder(0, night)
+            .build();
+        assertThat(CloseRule.inRules(today, rules)).isTrue();
     }
 
     private static Date getDate(int date) {

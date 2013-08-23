@@ -19,7 +19,7 @@ import org.json.*;
 
 public class CloseRule {
 
-    private Set<Integer> mRules = new HashSet<Integer>();
+    private Set<Integer> mCloseRules = new HashSet<Integer>();
     private Date mFrom;
     private Date mTo;
 
@@ -73,7 +73,7 @@ public class CloseRule {
 
     public CloseRule withDisableDates(List<Date> dates) {
         for (Date d : dates) {
-            mRules.add(encode(d));
+            mCloseRules.add(encode(d));
         }
         return this;
     }
@@ -83,9 +83,9 @@ public class CloseRule {
         cal.setTime((Date)mFrom.clone());
         while (!sameDate(cal.getTime(), mTo)) {
             if (cal.get(Calendar.DAY_OF_WEEK) != weekday) {
-                mRules.add(encode(cal.getTime()));
+                mCloseRules.add(encode(cal.getTime()));
             } else {
-                mRules.remove(encode(cal.getTime()));
+                mCloseRules.remove(encode(cal.getTime()));
             }
             cal.add(Calendar.DATE, 1);
         }
@@ -97,17 +97,51 @@ public class CloseRule {
         cal.setTime((Date)mFrom.clone());
         while (!sameDate(cal.getTime(), mTo)) {
             if (cal.get(Calendar.MONTH) != month) {
-                mRules.add(encode(cal.getTime()));
+                mCloseRules.add(encode(cal.getTime()));
             } else {
-                mRules.remove(encode(cal.getTime()));
+                mCloseRules.remove(encode(cal.getTime()));
             }
             cal.add(Calendar.DATE, 1);
         }
         return this;
     }
 
+    /*
+     * Must be called after openWeekday and openMonth. It's used
+     * to filter from the already chosen close rules.
+     *
+     * TODO Currently editing.
+     */
+    public CloseRule withPreorder(int pre, Date time) {
+        if (pre == 0) {
+            //When preorder only start from today.
+            Date now = new Date();
+            
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(time);
+
+            Calendar order = Calendar.getInstance();
+            order.set(Calendar.HOUR_OF_DAY, cal.get(Calendar.HOUR_OF_DAY));
+            order.set(Calendar.MINUTE, cal.get(Calendar.MINUTE));
+            if (order.getTime().before(now)) {
+                mCloseRules.remove(encode(now));
+            } else {
+                mCloseRules.add(encode(now));
+            }
+        } else {
+            //When preorder can start from today.
+            Calendar cal = Calendar.getInstance();
+            for (int i = 0; i < pre; i ++) {
+                cal.add(Calendar.DATE, -1);
+                mCloseRules.remove(cal.getTime());
+            }
+        }
+
+        return this;
+    }
+
     public Set<Integer> build() {
-        return mRules;
+        return mCloseRules;
     }
 }
 

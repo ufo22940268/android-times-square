@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.*;
 
 import static java.util.Calendar.DATE;
 import static java.util.Calendar.DAY_OF_MONTH;
@@ -38,6 +39,9 @@ import static java.util.Calendar.YEAR;
  * {@link #getSelectedDate()}.
  */
 public class CalendarPickerView extends ListView {
+
+    private Collection<Integer> mCloseRules;
+
     public enum SelectionMode {
         /**
          * Only one date will be selectable.  If there is already a selected date and you select a new
@@ -112,6 +116,11 @@ public class CalendarPickerView extends ListView {
      * @param maxDate Latest selectable date, exclusive.  Must be later than {@code minDate}.
      */
     public FluentInitializer init(Date minDate, Date maxDate) {
+        return init(minDate, maxDate, null);
+    }
+
+    public FluentInitializer init(Date minDate, Date maxDate, Collection<Integer> rules) {
+        mCloseRules = rules;
         if (minDate == null || maxDate == null) {
             throw new IllegalArgumentException(
                     "minDate and maxDate must be non-null.  " + dbg(minDate, maxDate));
@@ -267,7 +276,23 @@ public class CalendarPickerView extends ListView {
             selectedDates.add(cal.getDate());
         }
         Collections.sort(selectedDates);
+
+        filterDates(selectedDates);
         return selectedDates;
+    }
+
+    private void filterDates(List<Date> dates) {
+        if (mCloseRules == null) {
+            return;
+        }
+
+        Iterator<Date> iter = dates.iterator();
+        while(iter.hasNext()) {
+            Date date = iter.next();
+            if (CloseRule.inRules(date, mCloseRules)) {
+                iter.remove();
+            }
+        }
     }
 
     /** Returns a string summarizing what the client sent us for init() params. */
@@ -490,7 +515,7 @@ public class CalendarPickerView extends ListView {
         if (monthView == null) {
             monthView = MonthView.create(parent, inflater, weekdayNameFormat, listener, today);
         }
-        monthView.init(months.get(position), cells.get(position));
+        monthView.init(months.get(position), cells.get(position), mCloseRules);
         return monthView;
         }
     }

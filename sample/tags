@@ -195,7 +195,7 @@ $w	Session.vim	/^vnoremap $w `>a"`<i"$/;"	m
 <Plug>VCSUpdate	Session.vim	/^nnoremap <silent> <Plug>VCSUpdate :VCSUpdate$/;"	m
 <Plug>VCSVimDiff	Session.vim	/^nnoremap <silent> <Plug>VCSVimDiff :VCSVimDiff$/;"	m
 <S-Tab>	Session.vim	/^inoremap <silent> <S-Tab> =BackwardsSnippet()$/;"	m
-Dmaven.test.skip	Makefile	/^	mvn -Dmaven.test.skip=true install android:redeploy  android:run$/;"	m
+Dmaven.test.skip	Makefile	/^	mvn -Dmaven.test.skip=true install android:redeploy  android:run -q$/;"	m
 SampleTimesSquareActivity	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^public class SampleTimesSquareActivity extends Activity {$/;"	c
 SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
 TAG	src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^    private static final String TAG = "SampleTimesSquareActivity";$/;"	f	class:SampleTimesSquareActivity	file:

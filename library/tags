@@ -428,6 +428,7 @@ testRangeWithOneInitialSelection	test/com/squareup/timessquare/CalendarPickerVie
 testRangeWithTwoInitialSelections	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeWithTwoInitialSelections() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleFilterByDates	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByDates() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleFilterByMonth	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
+testRuleFilterByPreOrder	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByPreOrder() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleFilterByWeekday	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByWeekday() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleIntegers	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleIntegers() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testSelectabilityInFirstMonth	test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testSelectabilityInFirstMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
@@ -451,6 +452,7 @@ withDisableDates	src/com/squareup/timessquare/CloseRule.java	/^    public CloseR
 withLocale	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withLocale(Locale locale) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withOpenMonth	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenMonth(int month) {$/;"	m	class:CloseRule
 withOpenWeekday	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenWeekday(int weekday) {$/;"	m	class:CloseRule
+withPreorder	src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withPreorder(int pre, Date time) {$/;"	m	class:CloseRule
 withSelectedDate	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDate(Date selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withSelectedDates	src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDates(Collection<Date> selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 year	src/com/squareup/timessquare/MonthDescriptor.java	/^  private final int year;$/;"	f	class:MonthDescriptor	file:

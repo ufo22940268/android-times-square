@@ -14,12 +14,33 @@ import com.squareup.timessquare.CalendarPickerView.SelectionMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.*;
 
+import com.squareup.timessquare.CloseRule;
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class SampleTimesSquareActivity extends Activity {
     private static final String TAG = "SampleTimesSquareActivity";
     private CalendarPickerView calendar;
+
+    private Date d1 = getDate(1);
+    private Date d2 = getDate(2);
+    private Date d20 = getDate(20);
+    private Date d3 = getDate(3);
+    private Date d4 = getDate(4);
+    private Date d5 = getDate(5);
+    private Date d6 = getDate(6);
+    private Date d8 = getDate(8);
+    private Date d26 = getDate(26);
+    private Date d27 = getDate(27);
+    private Date d28 = getDate(28);
+    private Date d31 = getDate(31);
+
+    private static Date getDate(int date) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DATE, date);
+        return cal.getTime();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,92 +53,109 @@ public class SampleTimesSquareActivity extends Activity {
         final Calendar lastYear = Calendar.getInstance();
         lastYear.add(Calendar.YEAR, -1);
 
-        final Button single = (Button) findViewById(R.id.button_single);
-        final Button multi = (Button) findViewById(R.id.button_multi);
-        final Button range = (Button) findViewById(R.id.button_range);
-        final Button dialog = (Button) findViewById(R.id.button_dialog);
+        final Button disable_dates = (Button) findViewById(R.id.button_disable_dates);
+        final Button preorder = (Button) findViewById(R.id.button_preorder);
+        final Button weekly = (Button) findViewById(R.id.button_weekly);
+        final Button month = (Button) findViewById(R.id.button_month);
 
         calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
-        single.setEnabled(true);
-        multi.setEnabled(true);
-        range.setEnabled(false);
+        disable_dates.setEnabled(true);
+        preorder.setEnabled(true);
+        weekly.setEnabled(true);
 
-        Calendar today = Calendar.getInstance();
-        ArrayList<Date> dates = new ArrayList<Date>();
-        //today.add(Calendar.DATE, 3);
-        dates.add(today.getTime());
-        today.add(Calendar.YEAR, 1);
-        dates.add(today.getTime());
-        calendar.init(new Date(), nextYear.getTime()) //
+        final Calendar today = Calendar.getInstance();
+        final ArrayList<Date> dates = new ArrayList<Date>();
+        calendar.init(lastYear.getTime(), nextYear.getTime()) //
             .inMode(SelectionMode.RANGE) //
-            .withSelectedDates(dates);
+            .withSelectedDates(Arrays.asList(d1, d31));
 
-        single.setOnClickListener(new OnClickListener() {
+        disable_dates.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                single.setEnabled(false);
-                multi.setEnabled(true);
-                range.setEnabled(true);
+                disable_dates.setEnabled(false);
+                preorder.setEnabled(true);
+                weekly.setEnabled(true);
 
-                calendar.init(new Date(), nextYear.getTime()) //
-            .inMode(SelectionMode.SINGLE) //
-            .withSelectedDate(new Date());
+                Collection<Integer> rules = CloseRule.init(d1, d31)
+                    .withDisableDates(Arrays.asList(d26, d27))
+                    .build();
+
+                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
+                    .inMode(SelectionMode.RANGE) //
+                    .withSelectedDates(Arrays.asList(d1, d31));
             }
         });
 
-        multi.setOnClickListener(new OnClickListener() {
+        preorder.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                single.setEnabled(true);
-                multi.setEnabled(false);
-                range.setEnabled(true);
+                disable_dates.setEnabled(true);
+                preorder.setEnabled(false);
+                weekly.setEnabled(true);
 
-                Calendar today = Calendar.getInstance();
-                ArrayList<Date> dates = new ArrayList<Date>();
-                for (int i = 0; i < 5; i++) {
-                    today.add(Calendar.DAY_OF_MONTH, 3);
-                    dates.add(today.getTime());
-                }
-                calendar.init(new Date(), nextYear.getTime()) //
-            .inMode(SelectionMode.MULTIPLE) //
-            .withSelectedDates(dates);
+                Calendar cal = Calendar.getInstance();
+                cal.set(Calendar.HOUR_OF_DAY, 6);
+                Date mornning = cal.getTime();
+                cal.set(Calendar.HOUR_OF_DAY, 23);
+                Date night = cal.getTime();
+
+                Collection<Integer> rules = CloseRule.init(d1, d31)
+                    .withPreorder(0, night)
+                    .build();
+
+                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
+                    .inMode(SelectionMode.RANGE) //
+                    .withSelectedDates(Arrays.asList(d1, d31));
             }
         });
 
-        range.setOnClickListener(new OnClickListener() {
+        weekly.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                single.setEnabled(true);
-                multi.setEnabled(true);
-                range.setEnabled(false);
+                disable_dates.setEnabled(true);
+                preorder.setEnabled(true);
+                weekly.setEnabled(false);
+                month.setEnabled(true);
 
-                Calendar today = Calendar.getInstance();
-                ArrayList<Date> dates = new ArrayList<Date>();
-                today.add(Calendar.DATE, 3);
-                dates.add(today.getTime());
-                today.add(Calendar.DATE, 5);
-                dates.add(today.getTime());
-                calendar.init(new Date(), nextYear.getTime()) //
-            .inMode(SelectionMode.RANGE) //
-            .withSelectedDates(dates);
+                Calendar cal = Calendar.getInstance();
+                cal.add(Calendar.MONTH, -1);
+                Date prevMonth = cal.getTime(); 
+                cal = Calendar.getInstance();
+                cal.add(Calendar.MONTH, 1);
+                Date nextMonth = cal.getTime(); 
+
+                Collection<Integer> rules = CloseRule.init(prevMonth, nextMonth)
+                    .withOpenWeekday(Calendar.MONDAY)
+                    .build();
+
+                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
+                    .inMode(SelectionMode.RANGE) //
+                    .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
             }
         });
 
-        dialog.setOnClickListener(new OnClickListener() {
-            @Override public void onClick(View view) {
-            CalendarPickerView dialogView =
-            (CalendarPickerView) getLayoutInflater().inflate(R.layout.dialog, null, false);
-        dialogView.init(new Date(), nextYear.getTime());
-        new AlertDialog.Builder(SampleTimesSquareActivity.this)
-            .setTitle("I'm a dialog!")
-            .setView(dialogView)
-            .setNeutralButton("Dismiss", new DialogInterface.OnClickListener() {
-                @Override public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-                }
-            })
-        .create()
-            .show();
+        month.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                disable_dates.setEnabled(true);
+                preorder.setEnabled(true);
+                weekly.setEnabled(true);
+                month.setEnabled(false);
+
+                Calendar cal = Calendar.getInstance();
+                cal.add(Calendar.MONTH, -1);
+                Date prevMonth = cal.getTime(); 
+                cal = Calendar.getInstance();
+                cal.add(Calendar.MONTH, 1);
+                Date nextMonth = cal.getTime(); 
+
+                Collection<Integer> rules = CloseRule.init(prevMonth, nextMonth)
+                    .withOpenMonth(Calendar.AUGUST)
+                    .build();
+
+                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
+                    .inMode(SelectionMode.RANGE) //
+                    .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
             }
         });
 

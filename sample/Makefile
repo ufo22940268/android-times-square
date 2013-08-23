@@ -1,5 +1,5 @@
 .PHONY : main
-main: library
+main: library 
 	mvn -Dmaven.test.skip=true install android:redeploy  android:run -q
 
 library:

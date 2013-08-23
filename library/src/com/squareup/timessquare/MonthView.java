@@ -45,13 +45,12 @@ public class MonthView extends LinearLayout {
     grid = (CalendarGridView) findViewById(R.id.calendar_grid);
   }
 
-  public void init(MonthDescriptor month, List<List<MonthCellDescriptor>> cells) {
+  public void init(MonthDescriptor month, List<List<MonthCellDescriptor>> cells, Collection<Integer> rules) {
     Logr.d("Initializing MonthView (%d) for %s", System.identityHashCode(this), month);
     long start = System.currentTimeMillis();
     title.setText(month.getLabel());
 
     
-    List<Integer> rules = CloseRule.getRules();
     final int numRows = cells.size();
     grid.setNumRows(numRows);
     for (int i = 0; i < 6; i++) {
@@ -65,15 +64,18 @@ public class MonthView extends LinearLayout {
           CalendarCellView cellView = (CalendarCellView) weekRow.getChildAt(c);
 
           cellView.setText(Integer.toString(cell.getValue()));
-          cellView.setEnabled(cell.isCurrentMonth());
 
-          cellView.setSelectable(cell.isSelectable());
-
-          if (cell.isSelected() && !CloseRule.inRules(cell.getDate(), rules)) {
-              cellView.setSelected(true);
+          if (rules != null) {
+              if (cell.isSelected() && !CloseRule.inRules(cell.getDate(), rules)) {
+                  cellView.setSelected(true);
+              } else {
+                  cellView.setSelected(false);
+              }
           } else {
-              cellView.setSelected(false);
+              cellView.setSelected(cell.isSelected());
           }
+          cellView.setEnabled(false);
+          cellView.setSelectable(false);
 
           cellView.setCurrentMonth(cell.isCurrentMonth());
           cellView.setToday(cell.isToday());

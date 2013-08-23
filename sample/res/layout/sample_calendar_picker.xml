@@ -12,29 +12,29 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button_single"
+            android:id="@+id/button_disable_dates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Single"
+            android:text="disable_dates"
             android:enabled="false"/>
 
         <Button
-            android:id="@+id/button_multi"
+            android:id="@+id/button_preorder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Multi" />
+            android:text="preorder" />
 
         <Button
-            android:id="@+id/button_range"
+            android:id="@+id/button_weekly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Range" />
+            android:text="weekly" />
 
-      <Button
-          android:id="@+id/button_dialog"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Dialog" />
+        <Button
+            android:id="@+id/button_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="month" />
 
     </LinearLayout>
     
