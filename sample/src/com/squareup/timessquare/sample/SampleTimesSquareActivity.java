@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 import com.squareup.timessquare.CalendarPickerView;
+import com.squareup.timessquare.CalendarPickerView.OnDateSelectedListener;
 import com.squareup.timessquare.CalendarPickerView.SelectionMode;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -71,6 +72,12 @@ public class SampleTimesSquareActivity extends Activity {
             .build();
 
         calendar.init(d1, d31, rules); //
+        calendar.setOnDateSelectedListener(new OnDateSelectedListener() {
+            public void onDateSelected(Date date) {
+                System.out.println("++++++++++++++++++++" + date + "++++++++++++++++++++");
+                finish();
+            }
+        });
 
 
         disable_dates.setOnClickListener(new OnClickListener() {
