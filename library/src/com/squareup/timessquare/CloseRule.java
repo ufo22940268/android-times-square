@@ -82,11 +82,28 @@ public class CloseRule {
         return this;
     }
 
-    public CloseRule withOpenWeekday(int weekday) {
+    private boolean in(int i, int[] ia) {
+        if (ia == null) {
+            return false;
+        }
+
+        for (int j : ia) {
+            if (i == j) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public CloseRule withOpenWeekdays(int[] weekdays) {
+        if (weekdays == null) {
+            return this;
+        }
+
         Calendar cal = Calendar.getInstance();
         cal.setTime((Date)mFrom.clone());
         while (!sameDate(cal.getTime(), mTo)) {
-            if (cal.get(Calendar.DAY_OF_WEEK) != weekday) {
+            if (!in(cal.get(Calendar.DAY_OF_WEEK), weekdays)) {
                 mCloseRules.add(encode(cal.getTime()));
             } else {
                 mCloseRules.remove(encode(cal.getTime()));

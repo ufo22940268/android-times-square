@@ -142,7 +142,7 @@ public class SampleTimesSquareActivity extends Activity {
                 Date nextMonth = cal.getTime(); 
 
                 Collection<Integer> rules = CloseRule.init(prevMonth, nextMonth)
-                    .withOpenWeekday(Calendar.MONDAY)
+                    .withOpenWeekdays(new int[]{Calendar.MONDAY})
                     .build();
 
                 calendar.init(prevMonth, nextMonth, rules); //
