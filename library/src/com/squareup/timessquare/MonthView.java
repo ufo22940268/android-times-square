@@ -64,18 +64,22 @@ public class MonthView extends LinearLayout {
           CalendarCellView cellView = (CalendarCellView) weekRow.getChildAt(c);
 
           cellView.setText(Integer.toString(cell.getValue()));
+          cellView.setEnabled(cell.isCurrentMonth());
+          //cellView.setSelectable(cell.isSelectable());
+          cellView.setSelected(cell.isSelected());
 
           if (rules != null) {
-              if (cell.isSelected() && !CloseRule.inRules(cell.getDate(), rules)) {
-                  cellView.setSelected(true);
+              if (CloseRule.inRules(cell.getDate(), rules) || !cell.isSelectable()) {
+                  cellView.setSelectable(false);
+                  cellView.setEnabled(false);
               } else {
-                  cellView.setSelected(false);
+                  cellView.setSelectable(true);
+                  cellView.setEnabled(true);
               }
           } else {
-              cellView.setSelected(cell.isSelected());
+              cellView.setSelectable(false);
+              cellView.setEnabled(false);
           }
-          cellView.setEnabled(false);
-          cellView.setSelectable(false);
 
           cellView.setCurrentMonth(cell.isCurrentMonth());
           cellView.setToday(cell.isToday());

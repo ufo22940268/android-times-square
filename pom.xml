@@ -9,7 +9,7 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.squareup</groupId>
+  <groupId>com.biubiubiu.calendar</groupId>
   <artifactId>android-times-square-parent</artifactId>
   <packaging>pom</packaging>
   <version>1.0.4-SNAPSHOT</version>

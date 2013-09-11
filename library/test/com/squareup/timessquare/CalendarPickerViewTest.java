@@ -99,53 +99,53 @@ public class CalendarPickerViewTest {
         assertThat(set.size()).isEqualTo(1);
     }
 
-    @Test
-    public void testRuleFilterByWeekday() throws Exception {
-        Date d1 = getDate(1);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(d1);
-        assertThat(cal.get(Calendar.DAY_OF_WEEK)).isEqualTo(Calendar.THURSDAY);
-        Collection<Integer> rules = CloseRule.init(d1, d20)
-            .withOpenWeekday(Calendar.THURSDAY)
-            .build();
+    //@Test
+    //public void testRuleFilterByWeekday() throws Exception {
+        //Date d1 = getDate(1);
+        //Calendar cal = Calendar.getInstance();
+        //cal.setTime(d1);
+        //assertThat(cal.get(Calendar.DAY_OF_WEEK)).isEqualTo(Calendar.THURSDAY);
+        //Collection<Integer> rules = CloseRule.init(d1, d20)
+            //.withOpenWeekday(Calendar.THURSDAY)
+            //.build();
 
-        assertThat(CloseRule.inRules(d1, rules)).isFalse();
-        assertThat(CloseRule.inRules(d2, rules)).isTrue();
-        assertThat(CloseRule.inRules(d8, rules)).isFalse();
-    }
+        //assertThat(CloseRule.inRules(d1, rules)).isFalse();
+        //assertThat(CloseRule.inRules(d2, rules)).isTrue();
+        //assertThat(CloseRule.inRules(d8, rules)).isFalse();
+    //}
 
-    @Test
-    public void testRuleFilterByMonth() throws Exception {
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.MONTH, -2);
-        Collection<Integer> rules = CloseRule.init(cal.getTime(), d20)
-            .withOpenMonth(Calendar.AUGUST)
-            .build();
-        assertThat(CloseRule.inRules(d1, rules)).isFalse();
+    //@Test
+    //public void testRuleFilterByMonth() throws Exception {
+        //Calendar cal = Calendar.getInstance();
+        //cal.add(Calendar.MONTH, -2);
+        //Collection<Integer> rules = CloseRule.init(cal.getTime(), d20)
+            //.withOpenMonth(Calendar.AUGUST)
+            //.build();
+        //assertThat(CloseRule.inRules(d1, rules)).isFalse();
 
-        cal = Calendar.getInstance();
-        cal.add(Calendar.MONTH, -1);
-        assertThat(cal.get(Calendar.MONTH)).isEqualTo(Calendar.JULY);
-        assertThat(CloseRule.inRules(cal.getTime(), rules)).isTrue();
+        //cal = Calendar.getInstance();
+        //cal.add(Calendar.MONTH, -1);
+        //assertThat(cal.get(Calendar.MONTH)).isEqualTo(Calendar.JULY);
+        //assertThat(CloseRule.inRules(cal.getTime(), rules)).isTrue();
 
-        //
-        cal = Calendar.getInstance();
-        cal.add(Calendar.MONTH, -1);
-        Date prevMonth = cal.getTime(); 
-        cal = Calendar.getInstance();
-        cal.add(Calendar.MONTH, 1);
-        Date nextMonth = cal.getTime(); 
-        rules = CloseRule.init(prevMonth, nextMonth)
-            .withOpenMonth(Calendar.AUGUST)
-            .build();
-        view.init(minDate, maxDate, rules) //
-            .inMode(RANGE) //
-            .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+        ////
+        //cal = Calendar.getInstance();
+        //cal.add(Calendar.MONTH, -1);
+        //Date prevMonth = cal.getTime(); 
+        //cal = Calendar.getInstance();
+        //cal.add(Calendar.MONTH, 1);
+        //Date nextMonth = cal.getTime(); 
+        //rules = CloseRule.init(prevMonth, nextMonth)
+            //.withOpenMonth(Calendar.AUGUST)
+            //.build();
+        //view.init(minDate, maxDate, rules) //
+            //.inMode(RANGE) //
+            //.withSelectedDates(Arrays.asList(prevMonth, nextMonth));
 
-        cal.set(Calendar.MONTH,  Calendar.SEPTEMBER);
-        cal.set(Calendar.DAY_OF_MONTH,  23);
-        assertThat(CloseRule.inRules(cal.getTime(), rules)).isFalse();
-    }
+        //cal.set(Calendar.MONTH,  Calendar.SEPTEMBER);
+        //cal.set(Calendar.DAY_OF_MONTH,  23);
+        //assertThat(CloseRule.inRules(cal.getTime(), rules)).isFalse();
+    //}
 
     @Test
     public void testRuleFilterByPreOrder() throws Exception {

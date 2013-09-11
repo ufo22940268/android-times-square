@@ -1,391 +1,11 @@
-	library/Session.vim	/^cmap  <Home>$/;"	m
-	sample/Session.vim	/^cmap  <Home>$/;"	m
-	library/Session.vim	/^cmap  <Left>$/;"	m
-	sample/Session.vim	/^cmap  <Left>$/;"	m
-	library/Session.vim	/^cnoremap  <Del>$/;"	m
-	sample/Session.vim	/^cnoremap  <Del>$/;"	m
-	library/Session.vim	/^cmap  <End>$/;"	m
-	sample/Session.vim	/^cmap  <End>$/;"	m
-	library/Session.vim	/^cmap  <Right>$/;"	m
-	sample/Session.vim	/^cmap  <Right>$/;"	m
-	library/Session.vim	/^cnoremap  <BS>$/;"	m
-	sample/Session.vim	/^cnoremap  <BS>$/;"	m
-		library/Session.vim	/^inoremap <silent> 	 =TriggerSnippet()$/;"	m
-		sample/Session.vim	/^inoremap <silent> 	 =TriggerSnippet()$/;"	m
-	library/Session.vim	/^map   \/$/;"	m
-	sample/Session.vim	/^map   \/$/;"	m
-	library/Session.vim	/^cnoremap  $/;"	m
-	sample/Session.vim	/^cnoremap  $/;"	m
-	library/Session.vim	/^noremap  :TagbarToggle$/;"	m
-	sample/Session.vim	/^noremap  :TagbarToggle$/;"	m
-	library/Session.vim	/^cmap  <Down>$/;"	m
-	library/Session.vim	/^imap  <Plug>SuperTabForward$/;"	m
-	sample/Session.vim	/^cmap  <Down>$/;"	m
-	sample/Session.vim	/^imap  <Plug>SuperTabForward$/;"	m
-	library/Session.vim	/^cmap  <Up>$/;"	m
-	library/Session.vim	/^imap  <Plug>SuperTabBackward$/;"	m
-	sample/Session.vim	/^cmap  <Up>$/;"	m
-	sample/Session.vim	/^imap  <Plug>SuperTabBackward$/;"	m
-		library/Session.vim	/^inoremap <silent> 	 =ShowAvailableSnips()$/;"	m
-		sample/Session.vim	/^inoremap <silent> 	 =ShowAvailableSnips()$/;"	m
-c	library/Session.vim	/^nmap c :cs find c =expand("<cword>")$/;"	m
-c	sample/Session.vim	/^nmap c :cs find c =expand("<cword>")$/;"	m
-d	library/Session.vim	/^nmap d :cs find d =expand("<cword>")$/;"	m
-d	sample/Session.vim	/^nmap d :cs find d =expand("<cword>")$/;"	m
-e	library/Session.vim	/^nmap e :cs find e =expand("<cword>")$/;"	m
-e	sample/Session.vim	/^nmap e :cs find e =expand("<cword>")$/;"	m
-f	library/Session.vim	/^nmap f :cs find f =expand("<cfile>")$/;"	m
-f	sample/Session.vim	/^nmap f :cs find f =expand("<cfile>")$/;"	m
-g	library/Session.vim	/^nmap g :cs find g =expand("<cword>")$/;"	m
-g	sample/Session.vim	/^nmap g :cs find g =expand("<cword>")$/;"	m
-i	library/Session.vim	/^nmap i :cs find i ^=expand("<cfile>")$/;"	m
-i	sample/Session.vim	/^nmap i :cs find i ^=expand("<cfile>")$/;"	m
-s	library/Session.vim	/^nmap s :cs find s =expand("<cword>")$/;"	m
-s	sample/Session.vim	/^nmap s :cs find s =expand("<cword>")$/;"	m
-t	library/Session.vim	/^nmap t :cs find t =expand("<cword>")$/;"	m
-t	sample/Session.vim	/^nmap t :cs find t =expand("<cword>")$/;"	m
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-$<	library/Session.vim	/^vnoremap $< `>a -->`<i<!-- $/;"	m
-$<	sample/Session.vim	/^vnoremap $< `>a -->`<i<!-- $/;"	m
-$$	library/Session.vim	/^vnoremap $$ `>a"`<i"$/;"	m
-$$	sample/Session.vim	/^vnoremap $$ `>a"`<i"$/;"	m
-$/	library/Session.vim	/^vnoremap $\/ `>a*\/`<i\/*$/;"	m
-$/	sample/Session.vim	/^vnoremap $\/ `>a*\/`<i\/*$/;"	m
-$1	library/Session.vim	/^vnoremap $1 `>a)`<i($/;"	m
-$1	sample/Session.vim	/^vnoremap $1 `>a)`<i($/;"	m
-$2	library/Session.vim	/^vnoremap $2 `>a]`<i[$/;"	m
-$2	sample/Session.vim	/^vnoremap $2 `>a]`<i[$/;"	m
-$3	library/Session.vim	/^vnoremap $3 `>a}`<i{$/;"	m
-$3	sample/Session.vim	/^vnoremap $3 `>a}`<i{$/;"	m
-$q	library/Session.vim	/^vnoremap $q `>a'`<i'$/;"	m
-$q	sample/Session.vim	/^vnoremap $q `>a'`<i'$/;"	m
-$td	library/Session.vim	/^cnoremap $td tabnew ~\/Desktop\/$/;"	m
-$td	sample/Session.vim	/^cnoremap $td tabnew ~\/Desktop\/$/;"	m
-$th	library/Session.vim	/^cnoremap $th tabnew ~\/$/;"	m
-$th	sample/Session.vim	/^cnoremap $th tabnew ~\/$/;"	m
-$w	library/Session.vim	/^vnoremap $w `>a"`<i"$/;"	m
-$w	sample/Session.vim	/^vnoremap $w `>a"`<i"$/;"	m
-,ac	library/Session.vim	/^map ,ac :!adb_connect && pactive $TARGET$/;"	m
-,ac	sample/Session.vim	/^map ,ac :!adb_connect && pactive $TARGET$/;"	m
-,al	library/Session.vim	/^map ,al :!adb_connect&&adb logcat$/;"	m
-,al	sample/Session.vim	/^map ,al :!adb_connect&&adb logcat$/;"	m
-,b	library/Session.vim	/^nnoremap <silent> ,b :CommandTBuffer$/;"	m
-,b	sample/Session.vim	/^nnoremap <silent> ,b :CommandTBuffer$/;"	m
-,bc	library/Session.vim	/^noremap <silent> ,bc :!find . -name *.java > cscope.files && cscope -b -q$/;"	m
-,bc	sample/Session.vim	/^noremap <silent> ,bc :!find . -name *.java > cscope.files && cscope -b -q$/;"	m
-,bt	library/Session.vim	/^map <silent> ,bt :!ctags -R --exclude=\\.* $/;"	m
-,bt	sample/Session.vim	/^map <silent> ,bt :!ctags -R --exclude=\\.* $/;"	m
-,c	library/Session.vim	/^nmap ,c  <Plug>NERDCommenterToggle$/;"	m
-,c	sample/Session.vim	/^nmap ,c  <Plug>NERDCommenterToggle$/;"	m
-,c$	library/Session.vim	/^nmap ,c$ <Plug>NERDCommenterToEOL$/;"	m
-,c$	sample/Session.vim	/^nmap ,c$ <Plug>NERDCommenterToEOL$/;"	m
-,cA	library/Session.vim	/^nmap ,cA <Plug>NERDCommenterAppend$/;"	m
-,cA	sample/Session.vim	/^nmap ,cA <Plug>NERDCommenterAppend$/;"	m
-,cD	library/Session.vim	/^nmap <silent> ,cD <Plug>VCSDelete$/;"	m
-,cD	sample/Session.vim	/^nmap <silent> ,cD <Plug>VCSDelete$/;"	m
-,cG	library/Session.vim	/^nmap <silent> ,cG <Plug>VCSClearAndGotoOriginal$/;"	m
-,cG	sample/Session.vim	/^nmap <silent> ,cG <Plug>VCSClearAndGotoOriginal$/;"	m
-,cL	library/Session.vim	/^nmap <silent> ,cL <Plug>VCSLock$/;"	m
-,cL	sample/Session.vim	/^nmap <silent> ,cL <Plug>VCSLock$/;"	m
-,cN	library/Session.vim	/^nmap <silent> ,cN <Plug>VCSSplitAnnotate$/;"	m
-,cN	sample/Session.vim	/^nmap <silent> ,cN <Plug>VCSSplitAnnotate$/;"	m
-,cU	library/Session.vim	/^nmap <silent> ,cU <Plug>VCSUnlock$/;"	m
-,cU	sample/Session.vim	/^nmap <silent> ,cU <Plug>VCSUnlock$/;"	m
-,ca	library/Session.vim	/^nmap ,ca <Plug>NERDCommenterAltDelims$/;"	m
-,ca	sample/Session.vim	/^nmap ,ca <Plug>NERDCommenterAltDelims$/;"	m
-,caL	library/Session.vim	/^nmap ,caL <Plug>CalendarH$/;"	m
-,caL	sample/Session.vim	/^nmap ,caL <Plug>CalendarH$/;"	m
-,cal	library/Session.vim	/^nmap ,cal <Plug>CalendarV$/;"	m
-,cal	sample/Session.vim	/^nmap ,cal <Plug>CalendarV$/;"	m
-,cb	library/Session.vim	/^nmap ,cb <Plug>NERDCommenterAlignBoth$/;"	m
-,cb	sample/Session.vim	/^nmap ,cb <Plug>NERDCommenterAlignBoth$/;"	m
-,cc	library/Session.vim	/^nmap ,cc <Plug>NERDCommenterComment$/;"	m
-,cc	sample/Session.vim	/^nmap ,cc <Plug>NERDCommenterComment$/;"	m
-,cd	library/Session.vim	/^noremap ,cd :call CdToProjectRoot()$/;"	m
-,cd	sample/Session.vim	/^noremap ,cd :call CdToProjectRoot()$/;"	m
-,cg	library/Session.vim	/^nmap <silent> ,cg <Plug>VCSGotoOriginal$/;"	m
-,cg	sample/Session.vim	/^nmap <silent> ,cg <Plug>VCSGotoOriginal$/;"	m
-,ci	library/Session.vim	/^nmap ,ci <Plug>NERDCommenterInvert$/;"	m
-,ci	sample/Session.vim	/^nmap ,ci <Plug>NERDCommenterInvert$/;"	m
-,cl	library/Session.vim	/^nmap ,cl <Plug>NERDCommenterAlignLeft$/;"	m
-,cl	sample/Session.vim	/^nmap ,cl <Plug>NERDCommenterAlignLeft$/;"	m
-,cm	library/Session.vim	/^nmap ,cm <Plug>NERDCommenterMinimal$/;"	m
-,cm	sample/Session.vim	/^nmap ,cm <Plug>NERDCommenterMinimal$/;"	m
-,cn	library/Session.vim	/^nmap ,cn <Plug>NERDCommenterNested$/;"	m
-,cn	sample/Session.vim	/^nmap ,cn <Plug>NERDCommenterNested$/;"	m
-,cp	library/Session.vim	/^vnoremap ,cp :call CopySelectionLines()$/;"	m
-,cp	sample/Session.vim	/^vnoremap ,cp :call CopySelectionLines()$/;"	m
-,cq	library/Session.vim	/^nmap <silent> ,cq <Plug>VCSRevert$/;"	m
-,cq	sample/Session.vim	/^nmap <silent> ,cq <Plug>VCSRevert$/;"	m
-,cr	library/Session.vim	/^nmap <silent> ,cr <Plug>VCSReview$/;"	m
-,cr	sample/Session.vim	/^nmap <silent> ,cr <Plug>VCSReview$/;"	m
-,cs	library/Session.vim	/^nmap ,cs <Plug>NERDCommenterSexy$/;"	m
-,cs	sample/Session.vim	/^nmap ,cs <Plug>NERDCommenterSexy$/;"	m
-,cu	library/Session.vim	/^nmap ,cu <Plug>NERDCommenterUncomment$/;"	m
-,cu	sample/Session.vim	/^nmap ,cu <Plug>NERDCommenterUncomment$/;"	m
-,cv	library/Session.vim	/^nmap <silent> ,cv <Plug>VCSVimDiff$/;"	m
-,cv	sample/Session.vim	/^nmap <silent> ,cv <Plug>VCSVimDiff$/;"	m
-,cy	library/Session.vim	/^nmap ,cy <Plug>NERDCommenterYank$/;"	m
-,cy	sample/Session.vim	/^nmap ,cy <Plug>NERDCommenterYank$/;"	m
-,di	library/Session.vim	/^noremap ,di :call DebugInnerClass()$/;"	m
-,di	sample/Session.vim	/^noremap ,di :call DebugInnerClass()$/;"	m
-,do	library/Session.vim	/^noremap ,do :call DebugOuterClass()$/;"	m
-,do	sample/Session.vim	/^noremap ,do :call DebugOuterClass()$/;"	m
-,es	library/Session.vim	/^nmap ,es :call EditSnippet()$/;"	m
-,es	sample/Session.vim	/^nmap ,es :call EditSnippet()$/;"	m
-,et	library/Session.vim	/^nmap ,et :exec "e ~\/.vim\/ftplugin\/".&filetype.".vim"$/;"	m
-,et	sample/Session.vim	/^nmap ,et :exec "e ~\/.vim\/ftplugin\/".&filetype.".vim"$/;"	m
-,fb	library/Session.vim	/^noremap ,fb viB:g!#^.*\/\/#Tabularize \/,$/;"	m
-,fb	sample/Session.vim	/^noremap ,fb viB:g!#^.*\/\/#Tabularize \/,$/;"	m
-,fd	library/Session.vim	/^nmap ,fd :se ff=dos$/;"	m
-,fd	sample/Session.vim	/^nmap ,fd :se ff=dos$/;"	m
-,fu	library/Session.vim	/^nmap ,fu :se ff=unix$/;"	m
-,fu	sample/Session.vim	/^nmap ,fu :se ff=unix$/;"	m
-,ig	library/Session.vim	/^nmap <silent> ,ig <Plug>IndentGuidesToggle$/;"	m
-,ig	sample/Session.vim	/^nmap <silent> ,ig <Plug>IndentGuidesToggle$/;"	m
-,m	library/Session.vim	/^noremap ,m :make$/;"	m
-,m	sample/Session.vim	/^noremap ,m :make$/;"	m
-,p	library/Session.vim	/^vnoremap ,p :call EchoSelectionLines()$/;"	m
-,p	sample/Session.vim	/^vnoremap ,p :call EchoSelectionLines()$/;"	m
-,pl	library/Session.vim	/^noremap ,pl :call PushLarge()$/;"	m
-,pl	sample/Session.vim	/^noremap ,pl :call PushLarge()$/;"	m
-,pt	library/Session.vim	/^map ,pt :set invpaste$/;"	m
-,pt	sample/Session.vim	/^map ,pt :set invpaste$/;"	m
-,py	library/Session.vim	/^noremap ,py :call PushYlzhao()$/;"	m
-,py	sample/Session.vim	/^noremap ,py :call PushYlzhao()$/;"	m
-,rr	library/Session.vim	/^nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)$/;"	m
-,rr	sample/Session.vim	/^nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)$/;"	m
-,s?	library/Session.vim	/^map ,s? z=$/;"	m
-,s?	sample/Session.vim	/^map ,s? z=$/;"	m
-,sa	library/Session.vim	/^map ,sa zg$/;"	m
-,sa	sample/Session.vim	/^map ,sa zg$/;"	m
-,scd	library/Session.vim	/^nmap ,scd <Plug>SQLUGetColumnDef$/;"	m
-,scd	sample/Session.vim	/^nmap ,scd <Plug>SQLUGetColumnDef$/;"	m
-,scdt	library/Session.vim	/^nmap ,scdt <Plug>SQLUGetColumnDataType$/;"	m
-,scdt	sample/Session.vim	/^nmap ,scdt <Plug>SQLUGetColumnDataType$/;"	m
-,scl	library/Session.vim	/^nmap ,scl <Plug>SQLUCreateColumnList$/;"	m
-,scl	sample/Session.vim	/^nmap ,scl <Plug>SQLUCreateColumnList$/;"	m
-,scp	library/Session.vim	/^nmap ,scp <Plug>SQLUCreateProcedure$/;"	m
-,scp	sample/Session.vim	/^nmap ,scp <Plug>SQLUCreateProcedure$/;"	m
-,sf	library/Session.vim	/^nmap ,sf <Plug>SQLUFormatter$/;"	m
-,sf	library/Session.vim	/^vmap ,sf <Plug>SQLUFormatter$/;"	m
-,sf	sample/Session.vim	/^nmap ,sf <Plug>SQLUFormatter$/;"	m
-,sf	sample/Session.vim	/^vmap ,sf <Plug>SQLUFormatter$/;"	m
-,sfr	library/Session.vim	/^nmap ,sfr <Plug>SQLUFormatStmts$/;"	m
-,sfr	library/Session.vim	/^vmap ,sfr <Plug>SQLUFormatStmts$/;"	m
-,sfr	sample/Session.vim	/^nmap ,sfr <Plug>SQLUFormatStmts$/;"	m
-,sfr	sample/Session.vim	/^vmap ,sfr <Plug>SQLUFormatStmts$/;"	m
-,sfs	library/Session.vim	/^nmap ,sfs <Plug>SQLUFormatter$/;"	m
-,sfs	library/Session.vim	/^vmap ,sfs <Plug>SQLUFormatter$/;"	m
-,sfs	sample/Session.vim	/^nmap ,sfs <Plug>SQLUFormatter$/;"	m
-,sfs	sample/Session.vim	/^vmap ,sfs <Plug>SQLUFormatter$/;"	m
-,sn	library/Session.vim	/^map ,sn ]$/;"	m
-,sn	sample/Session.vim	/^map ,sn ]$/;"	m
-,sp	library/Session.vim	/^map ,sp [$/;"	m
-,sp	sample/Session.vim	/^map ,sp [$/;"	m
-,t	library/Session.vim	/^nnoremap <silent> ,t :CommandT$/;"	m
-,t	sample/Session.vim	/^nnoremap <silent> ,t :CommandT$/;"	m
-,tc	library/Session.vim	/^noremap ,tc :!adb_connect$/;"	m
-,tc	sample/Session.vim	/^noremap ,tc :!adb_connect$/;"	m
-,tcd	library/Session.vim	/^noremap ,tcd :call ClearDb()$/;"	m
-,tcd	sample/Session.vim	/^noremap ,tcd :call ClearDb()$/;"	m
-,tr	library/Session.vim	/^noremap ,tr :!adb shell stop; sleep 2; adb shell start$/;"	m
-,tr	sample/Session.vim	/^noremap ,tr :!adb shell stop; sleep 2; adb shell start$/;"	m
-,ts	library/Session.vim	/^noremap ,ts :!target_sync$/;"	m
-,ts	sample/Session.vim	/^noremap ,ts :!target_sync$/;"	m
-,u	library/Session.vim	/^noremap ,u hgUiwe$/;"	m
-,u	sample/Session.vim	/^noremap ,u hgUiwe$/;"	m
-,va	library/Session.vim	/^nnoremap ,va :e ~\/.config\/awesome\/rc.lua$/;"	m
-,va	sample/Session.vim	/^nnoremap ,va :e ~\/.config\/awesome\/rc.lua$/;"	m
-,vac	library/Session.vim	/^nnoremap ,vac :!make clean$/;"	m
-,vac	sample/Session.vim	/^nnoremap ,vac :!make clean$/;"	m
-,vcg	library/Session.vim	/^noremap ,vcg :e =language_dir$/;"	m
-,vcg	sample/Session.vim	/^noremap ,vcg :e =language_dir$/;"	m
-,vcs	library/Session.vim	/^noremap ,vcs :e res\/values-zh-rCN\/strings.xml$/;"	m
-,vcs	sample/Session.vim	/^noremap ,vcs :e res\/values-zh-rCN\/strings.xml$/;"	m
-,vd	library/Session.vim	/^nnoremap ,vd :!mvn android:deploy$/;"	m
-,vd	sample/Session.vim	/^nnoremap ,vd :!mvn android:deploy$/;"	m
-,veg	library/Session.vim	/^noremap ,veg :e =language_dir$/;"	m
-,veg	sample/Session.vim	/^noremap ,veg :e =language_dir$/;"	m
-,ves	library/Session.vim	/^noremap ,ves :e res\/values\/strings.xml$/;"	m
-,ves	sample/Session.vim	/^noremap ,ves :e res\/values\/strings.xml$/;"	m
-,vf	library/Session.vim	/^nnoremap ,vf :let @f=expand("%:t:r")$/;"	m
-,vf	sample/Session.vim	/^nnoremap ,vf :let @f=expand("%:t:r")$/;"	m
-,vh	library/Session.vim	/^nnoremap ,vh gg\/class$/;"	m
-,vh	sample/Session.vim	/^nnoremap ,vh gg\/class$/;"	m
-,vjs	library/Session.vim	/^map ,vjs :sp ~\/.vim\/snippets\/java.snippets$/;"	m
-,vjs	sample/Session.vim	/^map ,vjs :sp ~\/.vim\/snippets\/java.snippets$/;"	m
-,vl	library/Session.vim	/^noremap ,vl :cla$/;"	m
-,vl	sample/Session.vim	/^noremap ,vl :cla$/;"	m
-,vn	library/Session.vim	/^nnoremap ,vn :call EditSnippet()$/;"	m
-,vn	sample/Session.vim	/^nnoremap ,vn :call EditSnippet()$/;"	m
-,vp	library/Session.vim	/^noremap ,vp :let @p=expand("%:p")$/;"	m
-,vp	sample/Session.vim	/^noremap ,vp :let @p=expand("%:p")$/;"	m
-,vr	library/Session.vim	/^nnoremap ,vr :make runa$/;"	m
-,vr	sample/Session.vim	/^nnoremap ,vr :make runa$/;"	m
-,vs	library/Session.vim	/^map ,vs :so ~\/.vimrc$/;"	m
-,vs	sample/Session.vim	/^map ,vs :so ~\/.vimrc$/;"	m
-,vt	library/Session.vim	/^nnoremap ,vt :call EditFileType()$/;"	m
-,vt	sample/Session.vim	/^nnoremap ,vt :call EditFileType()$/;"	m
-,vu	library/Session.vim	/^nnoremap ,vu :!ant uninstall$/;"	m
-,vu	sample/Session.vim	/^nnoremap ,vu :!ant uninstall$/;"	m
-,vv	library/Session.vim	/^map ,vv :e ~\/.vimrc$/;"	m
-,vv	sample/Session.vim	/^map ,vv :e ~\/.vimrc$/;"	m
-,vxs	library/Session.vim	/^map ,vxs :sp ~\/.vim\/snippets\/xml.snippets$/;"	m
-,vxs	sample/Session.vim	/^map ,vxs :sp ~\/.vim\/snippets\/xml.snippets$/;"	m
-,w	library/Session.vim	/^nmap ,w :w!$/;"	m
-,w	sample/Session.vim	/^nmap ,w :w!$/;"	m
-,wc	library/Session.vim	/^map ,wc :call SwitchToProject("CONTACTS")$/;"	m
-,wc	sample/Session.vim	/^map ,wc :call SwitchToProject("CONTACTS")$/;"	m
-,wf	library/Session.vim	/^map ,wf :call SwitchToProject("FRA")$/;"	m
-,wf	sample/Session.vim	/^map ,wf :call SwitchToProject("FRA")$/;"	m
-,wh	library/Session.vim	/^map ,wh :call SwitchToProject("CALL_HISTORY")$/;"	m
-,wh	sample/Session.vim	/^map ,wh :call SwitchToProject("CALL_HISTORY")$/;"	m
-,wp	library/Session.vim	/^map ,wp :call SwitchToProject("PROVIDER")$/;"	m
-,wp	sample/Session.vim	/^map ,wp :call SwitchToProject("PROVIDER")$/;"	m
-,wr	library/Session.vim	/^map ,wr :call SwitchToProject("RES")$/;"	m
-,wr	sample/Session.vim	/^map ,wr :call SwitchToProject("RES")$/;"	m
-,x	library/Session.vim	/^nmap ,x :xa!$/;"	m
-,x	sample/Session.vim	/^nmap ,x :xa!$/;"	m
-,y	library/Session.vim	/^map ,y :YRShow$/;"	m
-,y	sample/Session.vim	/^map ,y :YRShow$/;"	m
-,z	library/Session.vim	/^map ,z <Plug>ZoomWin$/;"	m
-,z	sample/Session.vim	/^map ,z <Plug>ZoomWin$/;"	m
 .DEFAULT_GOAL	library/Makefile	/^.DEFAULT_GOAL := test$/;"	m
 .DEFAULT_GOAL	sample/Makefile	/^.DEFAULT_GOAL := main$/;"	m
-0	library/Session.vim	/^map 0 ^$/;"	m
-0	library/Session.vim	/^normal! 0$/;"	m
-0	sample/Session.vim	/^map 0 ^$/;"	m
-034l	sample/Session.vim	/^normal! 034l$/;"	m
-<C-Tab>	library/Session.vim	/^inoremap <C-Tab> 	$/;"	m
-<C-Tab>	sample/Session.vim	/^inoremap <C-Tab> 	$/;"	m
-<F2>	library/Session.vim	/^noremap <F2> :NERDTreeToggle$/;"	m
-<F2>	sample/Session.vim	/^noremap <F2> :NERDTreeToggle$/;"	m
-<F3>	library/Session.vim	/^map <F3> :Tlist$/;"	m
-<F3>	sample/Session.vim	/^map <F3> :Tlist$/;"	m
-<F9>	library/Session.vim	/^map <F9> ggVGg?$/;"	m
-<F9>	sample/Session.vim	/^map <F9> ggVGg?$/;"	m
-<Nul><Nul>c	library/Session.vim	/^nmap <Nul><Nul>c :vert scs find c =expand("<cword>")$/;"	m
-<Nul><Nul>c	sample/Session.vim	/^nmap <Nul><Nul>c :vert scs find c =expand("<cword>")$/;"	m
-<Nul><Nul>d	library/Session.vim	/^nmap <Nul><Nul>d :vert scs find d =expand("<cword>")$/;"	m
-<Nul><Nul>d	sample/Session.vim	/^nmap <Nul><Nul>d :vert scs find d =expand("<cword>")$/;"	m
-<Nul><Nul>e	library/Session.vim	/^nmap <Nul><Nul>e :vert scs find e =expand("<cword>")$/;"	m
-<Nul><Nul>e	sample/Session.vim	/^nmap <Nul><Nul>e :vert scs find e =expand("<cword>")$/;"	m
-<Nul><Nul>f	library/Session.vim	/^nmap <Nul><Nul>f :vert scs find f =expand("<cfile>")$/;"	m
-<Nul><Nul>f	sample/Session.vim	/^nmap <Nul><Nul>f :vert scs find f =expand("<cfile>")$/;"	m
-<Nul><Nul>g	library/Session.vim	/^nmap <Nul><Nul>g :vert scs find g =expand("<cword>")$/;"	m
-<Nul><Nul>g	sample/Session.vim	/^nmap <Nul><Nul>g :vert scs find g =expand("<cword>")$/;"	m
-<Nul><Nul>i	library/Session.vim	/^nmap <Nul><Nul>i :vert scs find i ^=expand("<cfile>")$/;"	m
-<Nul><Nul>i	sample/Session.vim	/^nmap <Nul><Nul>i :vert scs find i ^=expand("<cfile>")$/;"	m
-<Nul><Nul>s	library/Session.vim	/^nmap <Nul><Nul>s :vert scs find s =expand("<cword>")$/;"	m
-<Nul><Nul>s	sample/Session.vim	/^nmap <Nul><Nul>s :vert scs find s =expand("<cword>")$/;"	m
-<Nul><Nul>t	library/Session.vim	/^nmap <Nul><Nul>t :vert scs find t =expand("<cword>")$/;"	m
-<Nul><Nul>t	sample/Session.vim	/^nmap <Nul><Nul>t :vert scs find t =expand("<cword>")$/;"	m
-<Nul>c	library/Session.vim	/^nmap <Nul>c :scs find c =expand("<cword>")$/;"	m
-<Nul>c	sample/Session.vim	/^nmap <Nul>c :scs find c =expand("<cword>")$/;"	m
-<Nul>d	library/Session.vim	/^nmap <Nul>d :scs find d =expand("<cword>")$/;"	m
-<Nul>d	sample/Session.vim	/^nmap <Nul>d :scs find d =expand("<cword>")$/;"	m
-<Nul>e	library/Session.vim	/^nmap <Nul>e :scs find e =expand("<cword>")$/;"	m
-<Nul>e	sample/Session.vim	/^nmap <Nul>e :scs find e =expand("<cword>")$/;"	m
-<Nul>f	library/Session.vim	/^nmap <Nul>f :scs find f =expand("<cfile>")$/;"	m
-<Nul>f	sample/Session.vim	/^nmap <Nul>f :scs find f =expand("<cfile>")$/;"	m
-<Nul>g	library/Session.vim	/^nmap <Nul>g :scs find g =expand("<cword>")$/;"	m
-<Nul>g	sample/Session.vim	/^nmap <Nul>g :scs find g =expand("<cword>")$/;"	m
-<Nul>i	library/Session.vim	/^nmap <Nul>i :scs find i ^=expand("<cfile>")$/;"	m
-<Nul>i	sample/Session.vim	/^nmap <Nul>i :scs find i ^=expand("<cfile>")$/;"	m
-<Nul>s	library/Session.vim	/^nmap <Nul>s :scs find s =expand("<cword>")$/;"	m
-<Nul>s	sample/Session.vim	/^nmap <Nul>s :scs find s =expand("<cword>")$/;"	m
-<Nul>t	library/Session.vim	/^nmap <Nul>t :scs find t =expand("<cword>")$/;"	m
-<Nul>t	sample/Session.vim	/^nmap <Nul>t :scs find t =expand("<cword>")$/;"	m
-<Plug>CVSEdit	library/Session.vim	/^nnoremap <silent> <Plug>CVSEdit :CVSEdit$/;"	m
-<Plug>CVSEdit	sample/Session.vim	/^nnoremap <silent> <Plug>CVSEdit :CVSEdit$/;"	m
-<Plug>CVSEditors	library/Session.vim	/^nnoremap <silent> <Plug>CVSEditors :CVSEditors$/;"	m
-<Plug>CVSEditors	sample/Session.vim	/^nnoremap <silent> <Plug>CVSEditors :CVSEditors$/;"	m
-<Plug>CVSUnedit	library/Session.vim	/^nnoremap <silent> <Plug>CVSUnedit :CVSUnedit$/;"	m
-<Plug>CVSUnedit	sample/Session.vim	/^nnoremap <silent> <Plug>CVSUnedit :CVSUnedit$/;"	m
-<Plug>CVSWatchAdd	library/Session.vim	/^nnoremap <silent> <Plug>CVSWatchAdd :CVSWatch add$/;"	m
-<Plug>CVSWatchAdd	sample/Session.vim	/^nnoremap <silent> <Plug>CVSWatchAdd :CVSWatch add$/;"	m
-<Plug>CVSWatchOff	library/Session.vim	/^nnoremap <silent> <Plug>CVSWatchOff :CVSWatch off$/;"	m
-<Plug>CVSWatchOff	sample/Session.vim	/^nnoremap <silent> <Plug>CVSWatchOff :CVSWatch off$/;"	m
-<Plug>CVSWatchOn	library/Session.vim	/^nnoremap <silent> <Plug>CVSWatchOn :CVSWatch on$/;"	m
-<Plug>CVSWatchOn	sample/Session.vim	/^nnoremap <silent> <Plug>CVSWatchOn :CVSWatch on$/;"	m
-<Plug>CVSWatchRemove	library/Session.vim	/^nnoremap <silent> <Plug>CVSWatchRemove :CVSWatch remove$/;"	m
-<Plug>CVSWatchRemove	sample/Session.vim	/^nnoremap <silent> <Plug>CVSWatchRemove :CVSWatch remove$/;"	m
-<Plug>CVSWatchers	library/Session.vim	/^nnoremap <silent> <Plug>CVSWatchers :CVSWatchers$/;"	m
-<Plug>CVSWatchers	sample/Session.vim	/^nnoremap <silent> <Plug>CVSWatchers :CVSWatchers$/;"	m
-<Plug>CalendarH	library/Session.vim	/^nnoremap <silent> <Plug>CalendarH :cal Calendar(1)$/;"	m
-<Plug>CalendarH	sample/Session.vim	/^nnoremap <silent> <Plug>CalendarH :cal Calendar(1)$/;"	m
-<Plug>CalendarV	library/Session.vim	/^nnoremap <silent> <Plug>CalendarV :cal Calendar(0)$/;"	m
-<Plug>CalendarV	sample/Session.vim	/^nnoremap <silent> <Plug>CalendarV :cal Calendar(0)$/;"	m
-<Plug>NERDCommenterAlignBoth	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAlignBoth :call NERDComment("n", "AlignBoth")$/;"	m
-<Plug>NERDCommenterAlignBoth	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAlignBoth :call NERDComment("n", "AlignBoth")$/;"	m
-<Plug>NERDCommenterAlignLeft	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAlignLeft :call NERDComment("n", "AlignLeft")$/;"	m
-<Plug>NERDCommenterAlignLeft	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAlignLeft :call NERDComment("n", "AlignLeft")$/;"	m
-<Plug>NERDCommenterAppend	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAppend :call NERDComment("n", "Append")$/;"	m
-<Plug>NERDCommenterAppend	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterAppend :call NERDComment("n", "Append")$/;"	m
-<Plug>NERDCommenterComment	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("n", "Comment")$/;"	m
-<Plug>NERDCommenterComment	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("n", "Comment")$/;"	m
-<Plug>NERDCommenterInsert	library/Session.vim	/^inoremap <silent> <Plug>NERDCommenterInsert  <BS>:call NERDComment('i', "insert")$/;"	m
-<Plug>NERDCommenterInsert	sample/Session.vim	/^inoremap <silent> <Plug>NERDCommenterInsert  <BS>:call NERDComment('i', "insert")$/;"	m
-<Plug>NERDCommenterInvert	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterInvert :call NERDComment("n", "Invert")$/;"	m
-<Plug>NERDCommenterInvert	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterInvert :call NERDComment("n", "Invert")$/;"	m
-<Plug>NERDCommenterMinimal	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterMinimal :call NERDComment("n", "Minimal")$/;"	m
-<Plug>NERDCommenterMinimal	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterMinimal :call NERDComment("n", "Minimal")$/;"	m
-<Plug>NERDCommenterNested	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterNested :call NERDComment("n", "Nested")$/;"	m
-<Plug>NERDCommenterNested	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterNested :call NERDComment("n", "Nested")$/;"	m
-<Plug>NERDCommenterSexy	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterSexy :call NERDComment("n", "Sexy")$/;"	m
-<Plug>NERDCommenterSexy	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterSexy :call NERDComment("n", "Sexy")$/;"	m
-<Plug>NERDCommenterToEOL	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterToEOL :call NERDComment("n", "ToEOL")$/;"	m
-<Plug>NERDCommenterToEOL	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterToEOL :call NERDComment("n", "ToEOL")$/;"	m
-<Plug>NERDCommenterToggle	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterToggle :call NERDComment("n", "Toggle")$/;"	m
-<Plug>NERDCommenterToggle	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterToggle :call NERDComment("n", "Toggle")$/;"	m
-<Plug>NERDCommenterUncomment	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterUncomment :call NERDComment("n", "Uncomment")$/;"	m
-<Plug>NERDCommenterUncomment	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterUncomment :call NERDComment("n", "Uncomment")$/;"	m
-<Plug>NERDCommenterYank	library/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterYank :call NERDComment("n", "Yank")$/;"	m
-<Plug>NERDCommenterYank	sample/Session.vim	/^nnoremap <silent> <Plug>NERDCommenterYank :call NERDComment("n", "Yank")$/;"	m
-<Plug>NetrwBrowseX	library/Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)$/;"	m
-<Plug>NetrwBrowseX	sample/Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)$/;"	m
-<Plug>VCSAdd	library/Session.vim	/^nnoremap <silent> <Plug>VCSAdd :VCSAdd$/;"	m
-<Plug>VCSAdd	sample/Session.vim	/^nnoremap <silent> <Plug>VCSAdd :VCSAdd$/;"	m
-<Plug>VCSAnnotate	library/Session.vim	/^nnoremap <silent> <Plug>VCSAnnotate :VCSAnnotate$/;"	m
-<Plug>VCSAnnotate	sample/Session.vim	/^nnoremap <silent> <Plug>VCSAnnotate :VCSAnnotate$/;"	m
-<Plug>VCSClearAndGotoOriginal	library/Session.vim	/^nnoremap <silent> <Plug>VCSClearAndGotoOriginal :VCSGotoOriginal!$/;"	m
-<Plug>VCSClearAndGotoOriginal	sample/Session.vim	/^nnoremap <silent> <Plug>VCSClearAndGotoOriginal :VCSGotoOriginal!$/;"	m
-<Plug>VCSCommit	library/Session.vim	/^nnoremap <silent> <Plug>VCSCommit :VCSCommit$/;"	m
-<Plug>VCSCommit	sample/Session.vim	/^nnoremap <silent> <Plug>VCSCommit :VCSCommit$/;"	m
-<Plug>VCSDelete	library/Session.vim	/^nnoremap <silent> <Plug>VCSDelete :VCSDelete$/;"	m
-<Plug>VCSDelete	sample/Session.vim	/^nnoremap <silent> <Plug>VCSDelete :VCSDelete$/;"	m
-<Plug>VCSDiff	library/Session.vim	/^nnoremap <silent> <Plug>VCSDiff :VCSDiff$/;"	m
-<Plug>VCSDiff	sample/Session.vim	/^nnoremap <silent> <Plug>VCSDiff :VCSDiff$/;"	m
-<Plug>VCSGotoOriginal	library/Session.vim	/^nnoremap <silent> <Plug>VCSGotoOriginal :VCSGotoOriginal$/;"	m
-<Plug>VCSGotoOriginal	sample/Session.vim	/^nnoremap <silent> <Plug>VCSGotoOriginal :VCSGotoOriginal$/;"	m
-<Plug>VCSInfo	library/Session.vim	/^nnoremap <silent> <Plug>VCSInfo :VCSInfo$/;"	m
-<Plug>VCSInfo	sample/Session.vim	/^nnoremap <silent> <Plug>VCSInfo :VCSInfo$/;"	m
-<Plug>VCSLock	library/Session.vim	/^nnoremap <silent> <Plug>VCSLock :VCSLock$/;"	m
-<Plug>VCSLock	sample/Session.vim	/^nnoremap <silent> <Plug>VCSLock :VCSLock$/;"	m
-<Plug>VCSLog	library/Session.vim	/^nnoremap <silent> <Plug>VCSLog :VCSLog$/;"	m
-<Plug>VCSLog	sample/Session.vim	/^nnoremap <silent> <Plug>VCSLog :VCSLog$/;"	m
-<Plug>VCSRevert	library/Session.vim	/^nnoremap <silent> <Plug>VCSRevert :VCSRevert$/;"	m
-<Plug>VCSRevert	sample/Session.vim	/^nnoremap <silent> <Plug>VCSRevert :VCSRevert$/;"	m
-<Plug>VCSReview	library/Session.vim	/^nnoremap <silent> <Plug>VCSReview :VCSReview$/;"	m
-<Plug>VCSReview	sample/Session.vim	/^nnoremap <silent> <Plug>VCSReview :VCSReview$/;"	m
-<Plug>VCSSplitAnnotate	library/Session.vim	/^nnoremap <silent> <Plug>VCSSplitAnnotate :VCSAnnotate!$/;"	m
-<Plug>VCSSplitAnnotate	sample/Session.vim	/^nnoremap <silent> <Plug>VCSSplitAnnotate :VCSAnnotate!$/;"	m
-<Plug>VCSStatus	library/Session.vim	/^nnoremap <silent> <Plug>VCSStatus :VCSStatus$/;"	m
-<Plug>VCSStatus	sample/Session.vim	/^nnoremap <silent> <Plug>VCSStatus :VCSStatus$/;"	m
-<Plug>VCSUnlock	library/Session.vim	/^nnoremap <silent> <Plug>VCSUnlock :VCSUnlock$/;"	m
-<Plug>VCSUnlock	sample/Session.vim	/^nnoremap <silent> <Plug>VCSUnlock :VCSUnlock$/;"	m
-<Plug>VCSUpdate	library/Session.vim	/^nnoremap <silent> <Plug>VCSUpdate :VCSUpdate$/;"	m
-<Plug>VCSUpdate	sample/Session.vim	/^nnoremap <silent> <Plug>VCSUpdate :VCSUpdate$/;"	m
-<Plug>VCSVimDiff	library/Session.vim	/^nnoremap <silent> <Plug>VCSVimDiff :VCSVimDiff$/;"	m
-<Plug>VCSVimDiff	sample/Session.vim	/^nnoremap <silent> <Plug>VCSVimDiff :VCSVimDiff$/;"	m
-<S-Tab>	library/Session.vim	/^inoremap <silent> <S-Tab> =BackwardsSnippet()$/;"	m
-<S-Tab>	sample/Session.vim	/^inoremap <silent> <S-Tab> =BackwardsSnippet()$/;"	m
 CalendarCellView	library/src/com/squareup/timessquare/CalendarCellView.java	/^  public CalendarCellView(Context context) {$/;"	m	class:CalendarCellView
 CalendarCellView	library/src/com/squareup/timessquare/CalendarCellView.java	/^  public CalendarCellView(Context context, AttributeSet attrs) {$/;"	m	class:CalendarCellView
 CalendarCellView	library/src/com/squareup/timessquare/CalendarCellView.java	/^  public CalendarCellView(Context context, AttributeSet attrs, int defStyle) {$/;"	m	class:CalendarCellView
@@ -433,19 +53,7 @@ STATE_SELECTABLE	library/src/com/squareup/timessquare/CalendarCellView.java	/^  
 STATE_TODAY	library/src/com/squareup/timessquare/CalendarCellView.java	/^  private static final int[] STATE_TODAY = {$/;"	f	class:CalendarCellView	file:
 SampleTimesSquareActivity	sample/src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^public class SampleTimesSquareActivity extends Activity {$/;"	c
 SelectionMode	library/src/com/squareup/timessquare/CalendarPickerView.java	/^    public enum SelectionMode {$/;"	g	class:CalendarPickerView
-SessionLoad	library/Session.vim	/^let SessionLoad = 1$/;"	v
-SessionLoad	sample/Session.vim	/^let SessionLoad = 1$/;"	v
 TAG	sample/src/com/squareup/timessquare/sample/SampleTimesSquareActivity.java	/^    private static final String TAG = "SampleTimesSquareActivity";$/;"	f	class:SampleTimesSquareActivity	file:
-[%	library/Session.vim	/^vmap [% [%m'gv``$/;"	m
-[%	sample/Session.vim	/^vmap [% [%m'gv``$/;"	m
-]%	library/Session.vim	/^vmap ]% ]%m'gv``$/;"	m
-]%	sample/Session.vim	/^vmap ]% ]%m'gv``$/;"	m
-a%	library/Session.vim	/^vmap a% [%v]%$/;"	m
-a%	sample/Session.vim	/^vmap a% [%v]%$/;"	m
-aC	library/Session.vim	/^onoremap <silent> aC :call TextObjWordBasedColumn("aW")$/;"	m
-aC	sample/Session.vim	/^onoremap <silent> aC :call TextObjWordBasedColumn("aW")$/;"	m
-ac	library/Session.vim	/^onoremap <silent> ac :call TextObjWordBasedColumn("aw")$/;"	m
-ac	sample/Session.vim	/^onoremap <silent> ac :call TextObjWordBasedColumn("aw")$/;"	m
 adapter	library/src/com/squareup/timessquare/CalendarPickerView.java	/^    private final CalendarPickerView.MonthAdapter adapter;$/;"	f	class:CalendarPickerView	file:
 addView	library/src/com/squareup/timessquare/CalendarGridView.java	/^  @Override public void addView(View child, int index, ViewGroup.LayoutParams params) {$/;"	m	class:CalendarGridView
 addView	library/src/com/squareup/timessquare/CalendarRowView.java	/^  @Override public void addView(View child, int index, ViewGroup.LayoutParams params) {$/;"	m	class:CalendarRowView
@@ -531,14 +139,8 @@ getValue	library/src/com/squareup/timessquare/MonthCellDescriptor.java	/^  publi
 getView	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public View getView(int position, View convertView, ViewGroup parent) {$/;"	m	class:CalendarPickerView.MonthAdapter
 getYear	library/src/com/squareup/timessquare/MonthDescriptor.java	/^  public int getYear() {$/;"	m	class:MonthDescriptor
 grid	library/src/com/squareup/timessquare/MonthView.java	/^  CalendarGridView grid;$/;"	f	class:MonthView
-gx	library/Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
-gx	sample/Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 handleClick	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public void handleClick(MonthCellDescriptor cell) {$/;"	m	class:CalendarPickerView.CellClickedListener
 handleClick	library/src/com/squareup/timessquare/MonthView.java	/^    void handleClick(MonthCellDescriptor cell);$/;"	m	interface:MonthView.Listener
-iC	library/Session.vim	/^onoremap <silent> iC :call TextObjWordBasedColumn("iW")$/;"	m
-iC	sample/Session.vim	/^onoremap <silent> iC :call TextObjWordBasedColumn("iW")$/;"	m
-ic	library/Session.vim	/^onoremap <silent> ic :call TextObjWordBasedColumn("iw")$/;"	m
-ic	sample/Session.vim	/^onoremap <silent> ic :call TextObjWordBasedColumn("iw")$/;"	m
 inMode	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer inMode(SelectionMode mode) {$/;"	m	class:CalendarPickerView.FluentInitializer
 inRules	library/src/com/squareup/timessquare/CloseRule.java	/^    public static boolean inRules(Date d, Collection<Integer> rules) {$/;"	m	class:CloseRule
 inflater	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        private final LayoutInflater inflater;$/;"	f	class:CalendarPickerView.MonthAdapter	file:
@@ -597,16 +199,6 @@ onMeasure	library/src/com/squareup/timessquare/CalendarPickerView.java	/^    @Ov
 onMeasure	library/src/com/squareup/timessquare/CalendarRowView.java	/^  @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {$/;"	m	class:CalendarRowView
 rangeState	library/src/com/squareup/timessquare/CalendarCellView.java	/^  private RangeState rangeState = RangeState.NONE;$/;"	f	class:CalendarCellView	file:
 rangeState	library/src/com/squareup/timessquare/MonthCellDescriptor.java	/^  private RangeState rangeState;$/;"	f	class:MonthCellDescriptor	file:
-s:cpo_save	library/Session.vim	/^let s:cpo_save=&cpo$/;"	v
-s:cpo_save	sample/Session.vim	/^let s:cpo_save=&cpo$/;"	v
-s:l	library/Session.vim	/^let s:l = 7 - ((6 * winheight(0) + 16) \/ 33)$/;"	v
-s:l	sample/Session.vim	/^let s:l = 2 - ((1 * winheight(0) + 16) \/ 33)$/;"	v
-s:so_save	library/Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
-s:so_save	sample/Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
-s:sx	library/Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
-s:sx	sample/Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
-s:wipebuf	library/Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
-s:wipebuf	sample/Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 sameDate	library/src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean sameDate(Calendar cal, Calendar selectedDate) {$/;"	m	class:CalendarPickerView	file:
 sameDate	library/src/com/squareup/timessquare/CloseRule.java	/^    private static boolean sameDate(Date d1, Date d2) {$/;"	m	class:CloseRule	file:
 sameMonth	library/src/com/squareup/timessquare/CalendarPickerView.java	/^    private static boolean sameMonth(Calendar cal, MonthDescriptor month) {$/;"	m	class:CalendarPickerView	file:
@@ -655,9 +247,7 @@ testRangeStateOnDateSelections	library/test/com/squareup/timessquare/CalendarPic
 testRangeWithOneInitialSelection	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeWithOneInitialSelection() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRangeWithTwoInitialSelections	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRangeWithTwoInitialSelections() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleFilterByDates	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByDates() throws Exception {$/;"	m	class:CalendarPickerViewTest
-testRuleFilterByMonth	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleFilterByPreOrder	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByPreOrder() throws Exception {$/;"	m	class:CalendarPickerViewTest
-testRuleFilterByWeekday	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleFilterByWeekday() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testRuleIntegers	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testRuleIntegers() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testSelectabilityInFirstMonth	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testSelectabilityInFirstMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
 testSelectabilityInLastMonth	library/test/com/squareup/timessquare/CalendarPickerViewTest.java	/^    public void testSelectabilityInLastMonth() throws Exception {$/;"	m	class:CalendarPickerViewTest
@@ -684,21 +274,3 @@ withPreorder	library/src/com/squareup/timessquare/CloseRule.java	/^    public Cl
 withSelectedDate	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDate(Date selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withSelectedDates	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDates(Collection<Date> selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 year	library/src/com/squareup/timessquare/MonthDescriptor.java	/^  private final int year;$/;"	f	class:MonthDescriptor	file:
-zt	library/Session.vim	/^normal! zt$/;"	m
-zt	sample/Session.vim	/^normal! zt$/;"	m
-â	library/Session.vim	/^cmap â <S-Left>$/;"	m
-â	sample/Session.vim	/^cmap â <S-Left>$/;"	m
-ä	library/Session.vim	/^cnoremap ä <S-Right>$/;"	m
-ä	sample/Session.vim	/^cnoremap ä <S-Right>$/;"	m
-æ	library/Session.vim	/^cmap æ <S-Right>$/;"	m
-æ	sample/Session.vim	/^cmap æ <S-Right>$/;"	m
-è	library/Session.vim	/^cnoremap è $/;"	m
-è	sample/Session.vim	/^cnoremap è $/;"	m
-ê	library/Session.vim	/^nmap ê mz:m+$/;"	m
-ê	library/Session.vim	/^vmap ê :m'>+$/;"	m
-ê	sample/Session.vim	/^nmap ê mz:m+$/;"	m
-ê	sample/Session.vim	/^vmap ê :m'>+$/;"	m
-ë	library/Session.vim	/^nmap ë mz:m-2$/;"	m
-ë	library/Session.vim	/^vmap ë :m'<-2$/;"	m
-ë	sample/Session.vim	/^nmap ë mz:m-2$/;"	m
-ë	sample/Session.vim	/^vmap ë :m'<-2$/;"	m

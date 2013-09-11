@@ -65,9 +65,13 @@ public class SampleTimesSquareActivity extends Activity {
 
         final Calendar today = Calendar.getInstance();
         final ArrayList<Date> dates = new ArrayList<Date>();
-        calendar.init(lastYear.getTime(), nextYear.getTime()) //
-            .inMode(SelectionMode.RANGE) //
-            .withSelectedDates(Arrays.asList(d1, d31));
+
+        Collection<Integer> rules = CloseRule.init(d1, d31)
+            .withDisableDates(Arrays.asList(d26, d27))
+            .build();
+
+        calendar.init(d1, d31, rules); //
+
 
         disable_dates.setOnClickListener(new OnClickListener() {
             @Override
@@ -81,9 +85,7 @@ public class SampleTimesSquareActivity extends Activity {
                     .withDisableDates(Arrays.asList(d26, d27))
                     .build();
 
-                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
-                    .inMode(SelectionMode.RANGE) //
-                    .withSelectedDates(Arrays.asList(d1, d31));
+                calendar.init(lastYear.getTime(), nextYear.getTime(), rules); //
 
                 Toast.makeText(SampleTimesSquareActivity.this,
                     "disabled date " + d26 + "," + d27 , Toast.LENGTH_SHORT).show();
@@ -110,9 +112,7 @@ public class SampleTimesSquareActivity extends Activity {
                     .withPreorder(pre, preTime)
                     .build();
 
-                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
-                    .inMode(SelectionMode.RANGE) //
-                    .withSelectedDates(Arrays.asList(d1, d31));
+                calendar.init(d1, d31, rules);
 
                 Toast.makeText(SampleTimesSquareActivity.this,
                     String.format("preorder: %d days before %s", pre, preTime.toString()) , Toast.LENGTH_SHORT).show();
@@ -138,9 +138,7 @@ public class SampleTimesSquareActivity extends Activity {
                     .withOpenWeekday(Calendar.MONDAY)
                     .build();
 
-                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
-                    .inMode(SelectionMode.RANGE) //
-                    .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+                calendar.init(prevMonth, nextMonth, rules); //
                 Toast.makeText(SampleTimesSquareActivity.this,
                     "Open on monday", Toast.LENGTH_SHORT).show();
             }
@@ -165,9 +163,7 @@ public class SampleTimesSquareActivity extends Activity {
                     .withOpenMonth(Calendar.AUGUST)
                     .build();
 
-                calendar.init(lastYear.getTime(), nextYear.getTime(), rules) //
-                    .inMode(SelectionMode.RANGE) //
-                    .withSelectedDates(Arrays.asList(prevMonth, nextMonth));
+                calendar.init(prevMonth, nextMonth, rules); //
 
                 Toast.makeText(SampleTimesSquareActivity.this,
                     "Open on august", Toast.LENGTH_SHORT).show();
