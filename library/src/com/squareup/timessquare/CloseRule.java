@@ -72,6 +72,10 @@ public class CloseRule {
     }
 
     public CloseRule withDisableDates(List<Date> dates) {
+        if (dates == null) {
+            return this;
+        }
+
         for (Date d : dates) {
             mCloseRules.add(encode(d));
         }
