@@ -141,6 +141,7 @@ getYear	library/src/com/squareup/timessquare/MonthDescriptor.java	/^  public int
 grid	library/src/com/squareup/timessquare/MonthView.java	/^  CalendarGridView grid;$/;"	f	class:MonthView
 handleClick	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        @Override public void handleClick(MonthCellDescriptor cell) {$/;"	m	class:CalendarPickerView.CellClickedListener
 handleClick	library/src/com/squareup/timessquare/MonthView.java	/^    void handleClick(MonthCellDescriptor cell);$/;"	m	interface:MonthView.Listener
+in	library/src/com/squareup/timessquare/CloseRule.java	/^    private boolean in(int i, int[] ia) {$/;"	m	class:CloseRule	file:
 inMode	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer inMode(SelectionMode mode) {$/;"	m	class:CalendarPickerView.FluentInitializer
 inRules	library/src/com/squareup/timessquare/CloseRule.java	/^    public static boolean inRules(Date d, Collection<Integer> rules) {$/;"	m	class:CloseRule
 inflater	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        private final LayoutInflater inflater;$/;"	f	class:CalendarPickerView.MonthAdapter	file:
@@ -269,7 +270,7 @@ weekdayNameFormat	library/src/com/squareup/timessquare/CalendarPickerView.java	/
 withDisableDates	library/src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withDisableDates(List<Date> dates) {$/;"	m	class:CloseRule
 withLocale	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withLocale(Locale locale) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withOpenMonth	library/src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenMonth(int month) {$/;"	m	class:CloseRule
-withOpenWeekday	library/src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenWeekday(int weekday) {$/;"	m	class:CloseRule
+withOpenWeekdays	library/src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withOpenWeekdays(int[] weekdays) {$/;"	m	class:CloseRule
 withPreorder	library/src/com/squareup/timessquare/CloseRule.java	/^    public CloseRule withPreorder(int pre, Date time) {$/;"	m	class:CloseRule
 withSelectedDate	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDate(Date selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
 withSelectedDates	library/src/com/squareup/timessquare/CalendarPickerView.java	/^        public FluentInitializer withSelectedDates(Collection<Date> selectedDates) {$/;"	m	class:CalendarPickerView.FluentInitializer
