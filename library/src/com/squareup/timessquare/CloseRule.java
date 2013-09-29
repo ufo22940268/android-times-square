@@ -150,15 +150,36 @@ public class CloseRule {
                 mCloseRules.add(encode(now));
             }
         } else {
-            //When preorder can start from today.
+            //Handle invalidate days.
             Calendar cal = Calendar.getInstance();
             for (int i = 0; i < pre; i ++) {
-                cal.add(Calendar.DATE, -1);
-                mCloseRules.remove(cal.getTime());
+                mCloseRules.add(encode(cal.getTime()));
+                cal.add(Calendar.DATE, 1);
+            }
+
+            //Handle today.
+            if (afterTime(cal.getTime(), time)) {
+                mCloseRules.add(encode(cal.getTime()));
             }
         }
 
         return this;
+    }
+
+    private boolean afterTime(Date a, Date b) {
+        a.setYear(0);
+        a.setMonth(0);
+        a.setDate(0);
+
+        b.setYear(0);
+        b.setMonth(0);
+        b.setDate(0);
+
+        return a.getTime() > b.getTime();
+    }
+
+    private void preorderToday() {
+        
     }
 
     public Set<Integer> build() {
