@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.biubiubiu.calendar</groupId>
+    <groupId>com.meishixing.calendar</groupId>
     <artifactId>android-times-square-parent</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -22,7 +22,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.biubiubiu.calendar</groupId>
+      <groupId>com.meishixing.calendar</groupId>
       <artifactId>android-times-square</artifactId>
       <version>${project.version}</version>
       <type>apklib</type>
