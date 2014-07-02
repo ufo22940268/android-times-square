@@ -97,8 +97,8 @@ public class CalendarPickerView extends ListView {
             Calendar nextYear = Calendar.getInstance();
             nextYear.add(Calendar.YEAR, 1);
 
-            init(new Date(), nextYear.getTime()) //
-                .withSelectedDate(new Date());
+            init(new Date(), nextYear.getTime()); //
+//                .withSelectedDate(new Date());
         }
     }
 

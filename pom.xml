@@ -9,10 +9,10 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.biubiubiu.calendar</groupId>
+  <groupId>com.meishixing.calendar</groupId>
   <artifactId>android-times-square-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.4-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <name>Android-TimesSquare (Parent)</name>
   <description>Android component for picking a date on a calendar.</description>
